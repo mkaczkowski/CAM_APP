@@ -1,0 +1,21 @@
+Ad unit name: Saiyan Camera - Banner
+Ad unit ID: ca-app-pub-9064255794056383/2741614359
+
+Ad unit name: Saiyan Camera - Home
+Ad unit ID: ca-app-pub-9064255794056383/4218347552
+
+Ad unit name: Saiyan Camera - Next
+Ad unit ID: ca-app-pub-9064255794056383/8648547155
+
+
+/////////////
+
+
+Ad unit name: Ransagen - Banner
+Ad unit ID: ca-app-pub-9064255794056383/4078746752
+
+Ad unit name: Ransagen - Home
+Ad unit ID: ca-app-pub-9064255794056383/5555479951
+
+Ad unit name: Ransagen - Next
+Ad unit ID: ca-app-pub-9064255794056383/7032213159
