@@ -31,7 +31,7 @@ angular.module('sioWebApp.common').factory('notificationService', function($cord
                         text: 'Share' ,
                         type: 'button-positive',
                         onTap: function(e) {
-                            handler1(path);
+                            handler1();
                             return true;
                         }
                     },

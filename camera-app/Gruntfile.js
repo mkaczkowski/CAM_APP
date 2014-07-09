@@ -537,6 +537,12 @@ module.exports = function (grunt) {
 		'newer:jshint',
 		'serve'
 	]);
+
+	grunt.registerTask('run-preprod-dist', [
+		'fileblocks:default',
+		'replace:development',
+		'serve:dist'
+	]);
 	
 	grunt.registerTask('run-prod-dist', [
 		'fileblocks:default',

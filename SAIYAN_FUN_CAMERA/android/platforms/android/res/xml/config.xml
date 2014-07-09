@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.dragon.camera1" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.camerapps.saiyan" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
     <preference name="AndroidLaunchMode" value="singleTop" />
     <feature name="App">
@@ -37,12 +37,12 @@
     <feature name="Canvas2ImagePlugin">
         <param name="android-package" value="org.devgeeks.Canvas2ImagePlugin.Canvas2ImagePlugin" />
     </feature>
-    <name>Dragon Camera0</name>
+    <name>Saiyan Camera</name>
     <description>
-        Dragon Camera0
+        Saiyan Fun Camera
     </description>
-    <author email="dragon@camera1.com" href="http://dragoncamera0.com/">
-      Dragon Camera0 Team
+    <author email="jolanta.mandaryn@onet.pl" href="http://camerapps.com/">
+      CamerApps
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -51,9 +51,8 @@
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="Orientation" value="portrait" />
-    <preference name="android-minSdkVersion" value="10" />
+    <preference name="android-minSdkVersion" value="11" />
     <preference name="BackupWebStorage" value="none" />
-    <icon src="icon/icon.png" />
     <feature name="StatusBar">
         <param name="ios-package" onload="true" value="CDVStatusBar" />
     </feature>

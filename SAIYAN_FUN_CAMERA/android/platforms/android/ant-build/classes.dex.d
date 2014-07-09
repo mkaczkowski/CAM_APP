@@ -1,12 +1,12 @@
 C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes.dex : \
-C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\dragon\camera1\BuildConfig.class \
-C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\dragon\camera1\DragonCamera0.class \
-C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\dragon\camera1\R$attr.class \
-C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\dragon\camera1\R$drawable.class \
-C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\dragon\camera1\R$integer.class \
-C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\dragon\camera1\R$string.class \
-C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\dragon\camera1\R$xml.class \
-C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\dragon\camera1\R.class \
+C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\camerapps\saiyan\BuildConfig.class \
+C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\camerapps\saiyan\R$attr.class \
+C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\camerapps\saiyan\R$drawable.class \
+C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\camerapps\saiyan\R$integer.class \
+C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\camerapps\saiyan\R$string.class \
+C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\camerapps\saiyan\R$xml.class \
+C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\camerapps\saiyan\R.class \
+C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\camerapps\saiyan\SaiyanCamera.class \
 C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard$1.class \
 C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard$2.class \
 C:\WORKSPACE\CAMERA_APP\SAIYAN_FUN_CAMERA\android\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard.class \

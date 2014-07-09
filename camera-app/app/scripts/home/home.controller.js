@@ -74,10 +74,10 @@ angular.module('sioWebApp.home').controller('HomeCtrl', function ($scope, $ionic
 							function(msg){
 								hide();
 								if(successHandler){
-									successHandler(canvas.toDataURL())
+									successHandler(canvas)
 								}else{
 									notificationService.savedConfirm(msg,
-											function (path) {sharingService.shareViaFacebook(path)});
+											function () {$scope.sharePicure()});
 								}
 							},function(err){
 								hide();
@@ -90,8 +90,8 @@ angular.module('sioWebApp.home').controller('HomeCtrl', function ($scope, $ionic
 	};
 
 	$scope.sharePicure = function(){
-		$scope.saveCanvasToFile(function(filePath){
-			sharingService.shareViaFacebook(filePath);
+		$scope.saveCanvasToFile(function(canvas){
+			sharingService.shareViaFacebook(canvas.toDataURL());
 		});
 	};
 
