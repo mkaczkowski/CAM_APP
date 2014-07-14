@@ -452,7 +452,7 @@ module.exports = function (grunt) {
 					]}
 				}
 			}
-		},
+		}
 
 		/*concat:
 		{ contact:

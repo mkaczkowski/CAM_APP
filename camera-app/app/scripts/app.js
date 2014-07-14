@@ -21,7 +21,7 @@ sioWebApp.config(function(loggerProvider,configuration) {
 sioWebApp.config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider
 			.state('/', {
-				url: '/1',
+				url: '/',
 				templateUrl: 'views/main.html',
 				controller: 'MainCtrl'
 			})
@@ -31,7 +31,7 @@ sioWebApp.config(function($stateProvider, $urlRouterProvider) {
 				controller: 'CropCtrl'
 			})
 			.state('canvas', {
-				url: '/',
+				url: '/canvas',
 				templateUrl: 'views/canvas.html',
 				controller: 'CanvasCtrl'
 			})

@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the sioWebApp
  */
-angular.module('sioWebApp.home').controller('CropCtrl', function ($scope, notificationService, configuration, logger,$location, dataService) {
+angular.module('sioWebApp.home').controller('CropCtrl', function ($scope, notificationService, configuration, logger,$location, dataService, $timeout) {
 	var LOG = logger.getInstance('CropCtrl');
 
 	$scope.cropImage = function(imageData){
@@ -27,7 +27,11 @@ angular.module('sioWebApp.home').controller('CropCtrl', function ($scope, notifi
 
 	$scope.resultHandler = function( event, results, img ) {
 		dataService.cropDataUrl = img.getDataURL();
-		$location.path('/canvas')
+
+		$timeout(function(){
+			$location.path('/canvas')
+		},100)
+
 	}
 
 	$scope.cropImage(dataService.pictureDataUrl);
