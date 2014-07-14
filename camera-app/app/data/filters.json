@@ -1,0 +1,30 @@
+{
+    "filters": [
+		{ "name": "1977" },
+		{ "name": "brannan" },
+		{ "name": "clarity" },
+		{ "name": "concentrate" },
+		{ "name": "crossProcess" },
+		{ "name": "glowingSun" },
+		{ "name": "gotham" },
+		{ "name": "grungy" },
+		{ "name": "hazyDays" },
+		{ "name": "hefe" },
+		{ "name": "hemingway" },
+		{ "name": "herMajesty" },
+		{ "name": "jarques" },
+		{ "name": "lomo" },
+		{ "name": "lordkelvin" },
+		{ "name": "love" },
+		{ "name": "nashville" },
+		{ "name": "nostalgia" },
+		{ "name": "oldBoot" },
+		{ "name": "orangePeel" },
+		{ "name": "pinhole" },
+		{ "name": "sinCity" },
+		{ "name": "sunrise" },
+		{ "name": "vintage" },
+		{ "name": "xpro" }
+    ]
+}
+

@@ -7,17 +7,20 @@
 
 	<!-- build:css(.tmp) styles/main.css -->
 	<!-- bower:css -->
-	<link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css" />
+	<link rel="stylesheet" href="bower_components/ionic/css/ionic.css" />
 	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="bower_components/jquery-cropbox/jquery.cropbox.css" />
 	<!-- endbower -->
 	<!--<link rel="stylesheet" href="styles/ionic.css" />-->
 	<link rel="stylesheet" href="styles/main.css">
 	<link rel="stylesheet" href="styles/owl.carousel.css">
 	<link rel="stylesheet" href="styles/owl.theme.css">
+	<link rel="stylesheet" href="styles/owl.theme.css">
 	<!-- endbuild -->
 
 </head>
 
+<!--
 <body ng-app="sioWebApp" data-ng-controller="AppCtrl"  style="height: 100%">
 
 <div class="bar bar-header" data-ng-class="app.barStyle" style="height: 45px">
@@ -28,6 +31,16 @@
 <div style="position:absolute; top: 45px; bottom: 50px; left: 0px; right: 0px">
 	<ng-include src="'views/home/home.html'"></ng-include>
 </div>
+-->
+
+<body ng-app="sioWebApp" data-ng-controller="AppCtrl" style="height: 100%">
+
+<ion-nav-bar class="bar-positive nav-title-slide-ios7" align-title="center">
+	<ion-nav-back-button class="button-icon ion-arrow-left-c">
+	</ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-nav-view class="slide-left-right"></ion-nav-view>
 
 <!-- grunt wiredep:app -->
 <!-- build:js(.) scripts/vendor.js -->
@@ -42,15 +55,18 @@
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<script src="bower_components/ionic/release/js/ionic.js"></script>
-<script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+<script src="bower_components/ionic/js/ionic.js"></script>
+<script src="bower_components/ionic/js/ionic-angular.js"></script>
 <script src="bower_components/fastclick/lib/fastclick.js"></script>
 <script src="bower_components/hammerjs/hammer.js"></script>
 <script src="bower_components/jquery-hammerjs/jquery.hammer.js"></script>
 <script src="bower_components/angular-hammer/angular-hammer.js"></script>
+<script src="bower_components/jquery-cropbox/jquery.cropbox.js"></script>
+<script src="bower_components/caman/dist/caman.full.min.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
+<script src="libs/instagram.js"></script>
 <script src="libs/ng-cordova.js"></script>
 <script src="libs/owl.carousel.js"></script>
 <script src="cordova.js"></script>
@@ -74,7 +90,12 @@
 
 <!--home-->
 <script src="scripts/home/home._module.js"></script>
-<script src="scripts/home/home.controller.js"></script>
+<!--<script src="scripts/home/home.controller.js"></script>-->
+<script src="scripts/home/app.controller.js"></script>
+<script src="scripts/home/main.controller.js"></script>
+<script src="scripts/home/crop.controller.js"></script>
+<script src="scripts/home/canvas.controller.js"></script>
+<script src="scripts/home/filters.controller.js"></script>
 
 <!--navigation-->
 <script src="scripts/navigation/navigation._module.js"></script>
@@ -84,6 +105,7 @@
 <script src="scripts/common/common.module.js"></script>
 
 <script src="scripts/common/directives/debug.directive.js"></script>
+<script src="scripts/common/data.service.js"></script>
 <script src="scripts/common/directives/draggable.directive.js"></script>
 
 <script src="scripts/common/util/ny-logger.provider.js"></script>

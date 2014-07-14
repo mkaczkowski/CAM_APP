@@ -1,4 +1,4 @@
-angular.module('sioWebApp.common').factory('notificationService', function($cordovaDialogs, $ionicPopup, $timeout) {
+angular.module('sioWebApp.common').factory('notificationService', function($cordovaDialogs, $ionicPopup) {
     var notificationService = {};
 
     //$cordovaDialogs.alert('Wow!');
