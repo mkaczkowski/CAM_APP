@@ -1,10 +1,20 @@
-<ion-view title="Card Maker">
-<ion-content padding="true" scrollbar-y="false">
+<div class="bar bar-header" data-ng-class="app.barStyle" style="height: 45px">
+    <h1 class="title" ng-bind="app.name"></h1>
+    <button class="button icon ion-beer" ng-click="rateUs()"></button>
+</div>
 
-	<div class="button-bar-inline" style="">
-		<button class="button button-medium icon ion-android-camera" style="width: 45px;height: 45px;margin-left: 4px" ng-click="getPicture()"/>
-		<button class="button button-medium icon ion-android-image" style="width: 45px;height: 45px;margin-left: 4px"  ng-click="loadImage()"/>
-	</div>
+<div style="position: absolute; top: 45px; bottom: 0px; left: 0px; right: 0px;">
 
-</ion-content>
-</ion-view>
+    <div style="display: table; height: 100%; width: 100%">
+        <div style="display: table-cell; vertical-align: middle">
+            <div style="margin-left: auto; margin-right: auto; text-align: center">
+                <p style="font-size: 18px; font-weight: bold">Choose your picture</p>
+                <div class="button-bar-inline">
+                    <button class="button button-medium icon ion-android-camera" style="width: 45px;height: 45px;margin-left: 4px" ng-click="getPicture()"/>
+                    <button class="button button-medium icon ion-android-image" style="width: 45px;height: 45px;margin-left: 4px"  ng-click="loadImage()"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

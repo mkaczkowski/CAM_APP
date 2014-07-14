@@ -31,12 +31,22 @@
 
 <body ng-app="sioWebApp" data-ng-controller="AppCtrl" style="height: 100%">
 
-<ion-nav-bar class="bar-positive nav-title-slide-ios7" align-title="center">
+
+
+<div style="position:absolute; top: 0px; bottom: 0px; left: 0px; right: 0px">
+    <div ui-view></div>
+</div>
+
+
+<!--<ion-nav-bar class="bar-positive nav-title-slide-ios7" align-title="center">
 	<ion-nav-back-button class="button-icon ion-arrow-left-c">
 	</ion-nav-back-button>
 </ion-nav-bar>
 
-<ion-nav-view class="slide-left-right"></ion-nav-view>
+<ion-nav-view class="slide-left-right"></ion-nav-view>-->
+
+
+
 
 <!-- grunt wiredep:app -->
 <!-- build:js(.) scripts/vendor.js -->
@@ -51,17 +61,17 @@
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<script src="bower_components/ionic/js/ionic.js"></script>
-<script src="bower_components/ionic/js/ionic-angular.js"></script>
+<script src="bower_components/ionic/release/js/ionic.js"></script>
+<script src="bower_components/ionic/release/js/ionic-angular.js"></script>
 <script src="bower_components/fastclick/lib/fastclick.js"></script>
 <script src="bower_components/hammerjs/hammer.js"></script>
 <script src="bower_components/jquery-hammerjs/jquery.hammer.js"></script>
 <script src="bower_components/angular-hammer/angular-hammer.js"></script>
-<script src="bower_components/jquery-cropbox/jquery.cropbox.js"></script>
 <script src="bower_components/caman/dist/caman.full.min.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
+<script src="libs/jquery.cropbox.js"></script>
 <script src="libs/instagram.js"></script>
 <script src="libs/ng-cordova.js"></script>
 <script src="libs/owl.carousel.js"></script>
@@ -71,8 +81,8 @@
 <script src="libs/html2canvas.js"></script>
 
 <!--TMP::not dist-->
-<!--<script src="tmp/hammer.fakemultitouch.js"></script>
-<script src="tmp/hammer.showtouches.js"></script>-->
+<script src="tmp/hammer.fakemultitouch.js"></script>
+<script src="tmp/hammer.showtouches.js"></script>
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <!--_main-->
@@ -114,13 +124,13 @@
 <script>
 	FastClick.attach(document.body, {});
 
-/*	if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS) {
+	if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS) {
 		Hammer.plugins.showTouches();
 	}
 
 	if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS) {
 		Hammer.plugins.fakeMultitouch();
-	}*/
+	}
 </script>
 
 

@@ -20,7 +20,8 @@ var mySharedService = angular.module('sioWebApp.common').factory('mySharedServic
 		last_rotation : 0,
 		dragReady : 0,
 		isMirror:false,
-		opacity: 1
+		opacity: 1,
+        brightness: 1
 	}
 
 	var currentElement = {};
@@ -113,6 +114,14 @@ var mySharedService = angular.module('sioWebApp.common').factory('mySharedServic
 		}
 	}
 
+    sharedService.applyBrightness = function (elementObj, value) {
+        if(value){
+            elementObj.style.webkitFilter = "brightness("+(value*100)+"%)";
+            elementObj.style.filter = "brightness("+(value*100)+"%)";
+        }
+    }
+
+
 	sharedService.addElement = function (element, scope) {
 		element.css({top:scope.top,left:scope.left});
 		element.attr("data-id",makeid());
@@ -167,6 +176,11 @@ var mySharedService = angular.module('sioWebApp.common').factory('mySharedServic
 		sharedService.currentElementData.opacity = value;
 		sharedService.applyOpacity(sharedService.currentElement, value);
 	};
+
+    sharedService.changeBrightness = function(value){
+        sharedService.currentElementData.brightness = value;
+        sharedService.applyBrightness(sharedService.currentElement, value);
+    };
 
 	sharedService.removeElement = function(){
 		$rootScope.$broadcast('removeElement');

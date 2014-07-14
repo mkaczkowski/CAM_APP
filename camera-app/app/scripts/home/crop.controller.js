@@ -7,8 +7,11 @@
  * # MainCtrl
  * Controller of the sioWebApp
  */
-angular.module('sioWebApp.home').controller('CropCtrl', function ($scope, notificationService, configuration, logger,$location, dataService, $timeout) {
+angular.module('sioWebApp.home').controller('CropCtrl', function ($scope, notificationService, configuration, logger,$state, dataService, $timeout) {
 	var LOG = logger.getInstance('CropCtrl');
+
+
+    $scope.crop;
 
 	$scope.cropImage = function(imageData){
 
@@ -21,18 +24,43 @@ angular.module('sioWebApp.home').controller('CropCtrl', function ($scope, notifi
 		var cropContainer = angular.element(document.getElementById("cropContainer"));
 		cropContainer.attr("src",imageData);
 
-		cropContainer.cropbox({width: cropContainer.width(), height: cropContainer.height(), showControls:'always'})
+		cropContainer.cropbox({width: cropContainer.width(), height: cropContainer.height(), showControls:'never', maxZoom: 2})
 				.on('cropbox',$scope.resultHandler);
+
+        $scope.crop = cropContainer.data('cropbox');
 	};
 
 	$scope.resultHandler = function( event, results, img ) {
 		dataService.cropDataUrl = img.getDataURL();
 
 		$timeout(function(){
-			$location.path('/canvas')
+            $state.go('canvas')
 		},100)
 
 	}
+
+    $scope.zoomIn = function( ) {
+        $scope.crop.zoomIn();
+    }
+
+    $scope.zoomOut = function( ) {
+        $scope.crop.zoomOut();
+    }
+
+    $scope.rotate = function( ) {
+        $scope.crop.rotateRight();
+    }
+
+    $scope.mirror = function( ) {
+        $scope.crop.mirror();
+    }
+    $scope.complete = function( ) {
+        $scope.crop.complete();
+    }
+
+    $scope.goBack = function() {
+        window.history.back();
+    };
 
 	$scope.cropImage(dataService.pictureDataUrl);
 });

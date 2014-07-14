@@ -12,23 +12,13 @@ angular.module('sioWebApp.home').controller('FiltersCtrl', function ($scope, not
 
 	$scope.pictureUrl = dataService.alteredDataUrl;
 
-/*	$scope.showFilters = function () {
-		show();
-		mySharedService.prepForBroadcast(null);
-		$scope.imgToCanvas('canvas', function (canvas) {
-			hide();
-			$scope.dataUrl = canvas.toDataURL();
-			document.getElementById("filteredContainer").src = $scope.dataUrl
-			angular.element(document.getElementById("canvasView")).hide();
-			angular.element(document.getElementById("filteredView")).show();
-		});*/
-//	};
-
 	$scope.filterCanvas = function (filterName) {
 		var myimage = new Image();
-		myimage.onload = function () {
-			var filteredView = angular.element(document.getElementById("filteredView"));
-			filteredView.html('<img id="filteredContainer" src=' + $scope.pictureUrl + ' />');
+		myimage.onload = function (data) {
+            var dataUrl = data.currentTarget.attributes["0"].nodeValue;
+            console.log(dataUrl);
+			var filteredCanvas = angular.element(document.getElementById("filteredCanvas"));
+            filteredCanvas.html('<img id="filteredContainer" src=' + dataUrl + ' />');
 			Caman('#filteredContainer', function () {
 				this[filterName]();
 				this.render(function(){
@@ -36,10 +26,14 @@ angular.module('sioWebApp.home').controller('FiltersCtrl', function ($scope, not
 				});
 			});
 		}
-//		$parent.show();
 		myimage.src = $scope.pictureUrl;
 	};
 
+    $scope.goBack = function() {
+        window.history.back();
+    };
+
+    $scope.filterCanvas("pinhole");
 });
 
 angular.module('sioWebApp.home').directive('carouselfilters', function() {

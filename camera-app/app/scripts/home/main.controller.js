@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sioWebApp.home').controller('MainCtrl', function ($scope, cameraService,mySharedService,configuration,logger,$location, dataService) {
+angular.module('sioWebApp.home').controller('MainCtrl', function ($scope, cameraService,mySharedService,configuration,logger,$state, dataService) {
 
 	var LOG = logger.getInstance('MainCtrl');
 
@@ -9,11 +9,11 @@ angular.module('sioWebApp.home').controller('MainCtrl', function ($scope, camera
 			cameraService.getPicture(function(imageData){
 				mySharedService.clearAll();
 				dataService.pictureDataUrl = "data:image/jpeg;base64," + imageData;
-				$location.path('/crop');
+                $state.go('crop')
 			});
 		}else{
 			dataService.pictureDataUrl = "data/background.jpg";
-			$location.path('/crop')
+            $state.go('crop')
 		}
 	};
 
@@ -21,11 +21,11 @@ angular.module('sioWebApp.home').controller('MainCtrl', function ($scope, camera
 		if(configuration.isProd) {
 			cameraService.loadImageFromLibrary(function(imageData){
 				dataService.pictureDataUrl = imageData;
-				$location.path('/crop')
+                $state.go('crop')
 			});
 		}else{
 			dataService.pictureDataUrl = "data/background.jpg";
-			$location.path('/crop')
+            $state.go('crop')
 		}
 	};
 

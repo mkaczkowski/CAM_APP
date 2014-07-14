@@ -1,4 +1,11 @@
-<div class="list card" style="position:absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; margin: 0px 10px;" data-ng-controller="HomeCtrl">
+
+
+<div class="bar bar-header" data-ng-class="app.barStyle" style="height: 45px">
+    <h1 class="title" ng-bind="app.name"></h1>
+    <button class="button icon ion-android-star" ng-click="rateUs()"></button>
+</div>
+
+<div class="list card" style="position:absolute; top: 45px; bottom: 0px; left: 0px; right: 0px; margin: 0px 10px;" data-ng-controller="HomeCtrl">
 	<div class="bar bar-header bar-stable" style="height: 55px">
 		<div class="button-bar-inline"  style="position:absolute;left: 0px;">
 			<button class="button button-medium icon ion-android-camera" style="width: 45px;height: 45px" ng-click="getPicture()" />

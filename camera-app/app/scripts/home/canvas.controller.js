@@ -8,7 +8,7 @@
  * Controller of the sioWebApp
  */
 angular.module('sioWebApp.home').controller('CanvasCtrl', function ($scope, $timeout, mySharedService,
-		notificationService, configuration, logger, dataService, $location, imageService, sharingService) {
+		notificationService, configuration, logger, dataService, $state, imageService, sharingService) {
 
 	var LOG = logger.getInstance('CanvasCtrl');
 
@@ -16,6 +16,8 @@ angular.module('sioWebApp.home').controller('CanvasCtrl', function ($scope, $tim
 	$scope.isSelected = false;
 	$scope.isExpanded = true;
 	$scope.tmpOpacity = 1;
+    $scope.tmpBrightness = 1;
+
 	$scope.isOpacityRangeVisible = false;
 
 	$scope.pictureUrl = dataService.cropDataUrl;
@@ -26,6 +28,7 @@ angular.module('sioWebApp.home').controller('CanvasCtrl', function ($scope, $tim
 			$scope.isEmpty = false;
 			if($scope.isOpacityRangeVisible){
 				$scope.tmpOpacity = mySharedService.currentElementData.opacity;
+                $scope.tmpBrightness = mySharedService.currentElementData.brightness;
 			}
 		}else{
 			$scope.isOpacityRangeVisible = false;
@@ -58,12 +61,17 @@ angular.module('sioWebApp.home').controller('CanvasCtrl', function ($scope, $tim
 		$scope.isOpacityRangeVisible = !$scope.isOpacityRangeVisible;
 		if($scope.isOpacityRangeVisible){
 			$scope.tmpOpacity = mySharedService.currentElementData.opacity;
+            $scope.tmpBrightness = mySharedService.currentElementData.brightness;
 		}
 	};
 
 	$scope.changeOpacity = function(value){
 		mySharedService.changeOpacity(value);
 	};
+
+    $scope.changeBrightness = function(value){
+        mySharedService.changeBrightness(value);
+    };
 
 	$scope.clearWhiteboard = function(){
 		notificationService.confirm('Are you sure you want to clear?',
@@ -79,7 +87,7 @@ angular.module('sioWebApp.home').controller('CanvasCtrl', function ($scope, $tim
 			dataService.alteredDataUrl = canvas.toDataURL();
 
 			$timeout(function(){
-				$location.path("/filters")
+                $state.go('filters')
 			},100);
 
 		});
@@ -126,6 +134,10 @@ angular.module('sioWebApp.home').controller('CanvasCtrl', function ($scope, $tim
 			sharingService.shareViaFacebook(canvas.toDataURL());
 		});
 	};
+
+    $scope.goBack = function() {
+        window.history.back();
+    };
 
 	mySharedService.init();
 });

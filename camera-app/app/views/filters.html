@@ -1,17 +1,17 @@
-<ion-view title="">
-	<ion-nav-buttons side="right">
-		<button class="button button-medium icon ion-android-checkmark"  data-ng-class="isEmpty ? 'disabled' : ''" ng-click="saveCanvasToFile()"/>
-		<button class="button button-medium icon ion-android-share"  data-ng-class="isEmpty ? 'disabled' : ''" ng-click="sharePicure()"/>
-	</ion-nav-buttons>
-	<ion-content padding="true" scroll="false">
+<div class="bar bar-header" data-ng-class="app.barStyle" style="height: 45px">
+    <div style="width: 100%; text-align: left">
+        <button class="button button-icon icon ion-arrow-left-c" ng-click="goBack()" />
+    </div>
+    <div style="width: 100%; text-align: right">
+        <button class="button button-medium icon ion-android-checkmark" ng-click="saveCanvasToFile()"/>
+        <button class="button button-medium icon ion-android-share" ng-click="sharePicure()"/>
+    </div>
+</div>
 
-		<div id="filteredCanvas"  style="position: absolute; bottom: 70px; top: 0px; left: 0px; right: 0px">
-			<img id="filteredContainer" src="{{pictureUrl}}" ng-cloak>
-		</div>
+<div id="filteredCanvas"  style="position: absolute; bottom: 70px; top: 45px; left: 0px; right: 0px">
+    <img id="filteredContainer">
+</div>
 
-		<div class="bar bar-footer bar-light" style="position: absolute; bottom: 0px; left: 0px; right: 0px; height: 70px">
-			<carouselfilters path="data/filters.json" filterAction="filterAction()"><!--data from json--></carouselfilters>
-		</div>
-
-	</ion-content>
-</ion-view>
+<div class="bar bar-footer bar-light" style="position: absolute; bottom: 0px; left: 0px; right: 0px; height: 70px">
+    <carouselfilters path="data/filters.json" filterAction="filterAction()"><!--data from json--></carouselfilters>
+</div>
