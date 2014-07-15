@@ -38,19 +38,26 @@ angular.module('sioWebApp.home').controller('CropCtrl', function ($scope, notifi
     }
 
     $scope.zoomIn = function( ) {
-        $scope.crop.zoomIn();
+//        $scope.crop.zoomIn();
+		$scope.cropPlugin.zoomIn();
     }
 
     $scope.zoomOut = function( ) {
-        $scope.crop.zoomOut();
+//        $scope.crop.zoomOut();
+		$scope.cropPlugin.zoomOut();
     }
 
-    $scope.rotate = function( ) {
+    $scope.rotateRight = function( ) {
         $scope.rotatePlugin.rotateRight();
     }
 
+	$scope.rotateLeft = function( ) {
+		$scope.rotatePlugin.rotateLeft();
+	}
+
     $scope.mirror = function( ) {
-        $scope.crop.mirror();
+//        $scope.crop.mirror();
+		$scope.rotatePlugin.flip();
     }
     $scope.complete = function( ) {
 //        $scope.crop.complete();
@@ -80,26 +87,24 @@ angular.module('sioWebApp.home').controller('CropCtrl', function ($scope, notifi
             $scope.dkrm = new Darkroom('#cropContainer', {
                 // Size options
                 minWidth: clientWidth,
-                minHeight: 100,
+                minHeight: 200,
                 maxWidth: clientWidth,
                 maxHeight: clientHeight,
                 plugins: {
                     crop: {
-                        minHeight: clientHeight / 2,
-                        minWidth: clientWidth / 2,
+                        minHeight: clientHeight / 3,
+                        minWidth: clientWidth / 3,
                         ratio: clientWidth / clientHeight
                     }
                 },
                 init: function () {
+					var width = $(".upper-canvas").width();
+					var height = $(".upper-canvas").height();
                     $scope.rotatePlugin = this.getPlugin('rotate');
                     $scope.cropPlugin = this.getPlugin('crop');
-                    $scope.cropPlugin.selectZone((clientWidth - 200) / 2, (clientHeight - 200) / 2, clientWidth, clientHeight);
-//                $scope.cropPlugin.requireFocus();
-
+                    $scope.cropPlugin.selectZone(50/2, 50/2, width - 50, height - 50);
                     this.addEventListener('image:rotate', function (data) {
-                        var width = $(".upper-canvas").width();
-                        var height = $(".upper-canvas").height();
-                        $scope.cropPlugin.selectZone((width - 200) / 2, (height - 200) / 2, clientWidth, clientHeight);
+						$scope.cropPlugin.selectZone(50/2, 50/2, width - 50, height - 50);
                     });
                 }
             });

@@ -267,7 +267,7 @@
       this.toolbar = new Toolbar(toolbar);
       this.canvas = new Canvas(canvas, {
         selection: false,
-        backgroundColor: '#ccc',
+        backgroundColor: '#ccc'
       });
 
       this.canvas.setWidth(this.image.getWidth());

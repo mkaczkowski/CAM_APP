@@ -10,6 +10,6 @@
       });
 
       this.destroyButton.addEventListener('click', this.darkroom.selfDestroy.bind(this.darkroom));
-    },
+    }
   });
 })(window, document, Darkroom);
