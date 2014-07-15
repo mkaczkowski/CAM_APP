@@ -288,7 +288,6 @@ angular.module('sioWebApp.common').directive("draggableItem", function (myShared
 			};
 		},
 		link: function (scope, element) {
-
 			scope.$on('handleBroadcast', function() {
 				var tmpIsSelected = (mySharedService.message == element);
 				var needRefresh = tmpIsSelected != scope.isSelected;
@@ -340,7 +339,6 @@ angular.module('sioWebApp.common').directive("draggableItem", function (myShared
 				mySharedService.addElement(element, scope);
 				verifyBorder();
 			}
-
 		}
 	};
 })

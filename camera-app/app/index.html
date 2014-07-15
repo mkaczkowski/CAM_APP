@@ -6,34 +6,29 @@
 	<title></title>
 
 	<!-- build:css(.tmp) styles/main.css -->
-	<!-- bower:css -->
-	<link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css" />
-	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
-	<!-- endbower -->
-	<link rel="stylesheet" href="bower_components/jquery-cropbox/jquery.cropbox.css" />
+	<link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="../bower_components/ionic/release/css/ionic.css" />
 	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="../bower_components/jquery-cropbox/jquery.cropbox.css" />
 	<link rel="stylesheet" href="styles/owl.carousel.css">
 	<link rel="stylesheet" href="styles/owl.theme.css">
 	<!-- endbuild -->
 
 	<style>
-		.icon-camera:before {
-			content: url("data/camera.png");
-		}
-
-		.icon-image:before {
-			content: url("data/image.png");
-		}
+		.icon-camera:before { content: url("data/camera.png"); }
+		.icon-image:before { content: url("data/image.png"); }
 	</style>
 </head>
 
 <body ng-app="sioWebApp" data-ng-controller="AppCtrl" style="height: 100%; background: url('data/wallpaper.jpg') no-repeat center center fixed;
 -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
 
-<div class="slide-left-right"  style="position:absolute; top: 0px; bottom: 0px; left: 0px; right: 0px">
+<div class="slide-left-right"  style="position:absolute; top: 0px; bottom: 0px; left: 0px; right: 0px;">
 	<div class="bar bar-header bar-light" style="height: 45px; background-color: rgba(255, 255, 255, 0.92)"></div>
     <div style="height: 100%;width: 100%" ui-view></div>
 </div>
+
+<p style="position: absolute;bottom: 0px;width: 100%; color: #1a1a1a; font-size: 13px;text-align: center;font-weight: bold">© camerapps</p>
 
 <!-- grunt wiredep:app -->
 <!-- build:js(.) scripts/vendor.js -->
@@ -110,13 +105,6 @@
 <script>
 	FastClick.attach(document.body, {});
 
-	if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS) {
-		Hammer.plugins.showTouches();
-	}
-
-	if(!Hammer.HAS_TOUCHEVENTS && !Hammer.HAS_POINTEREVENTS) {
-		Hammer.plugins.fakeMultitouch();
-	}
 </script>
 
 
