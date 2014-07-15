@@ -46,48 +46,34 @@ sioWebApp.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise("/");
 })
 
-
 sioWebApp.factory('loadingService', function($ionicLoading) {
 	var loadingService = {};
-
 	var loading = {};
 	loadingService.show = function() { loading = $ionicLoading.show({ content: 'Processing...' }); };
-	loadingService.hide = function(){ if(!loading) return; loading.hide(); };
-
+	loadingService.hide = function(){ if(!loading) return; loading.hide(); loading = null; };
 	return loadingService;
 });
 
-
-
-sioWebApp.run(function($rootScope,configuration,$ionicPlatform,$timeout,logger,admobService,networkService) {
-
+sioWebApp.run(function($rootScope,configuration,$ionicPlatform,$state,$timeout,logger,admobService,networkService) {
 	var LOG = logger.getInstance('sioWebApp');
-
 	$rootScope.app = configuration;
-
 	$ionicPlatform.ready(function() {
-
 		LOG.info("$ionicPlatform - ready");
 		if(networkService.isOnline()){
-//            notificationService.showInfo("online");
 			admobService.init();
 			admobService.createBanner();
 			$timeout(function(){
 				admobService.createInterstitial();
 			},1000)
-		}else{
-//            notificationService.showInfo("offline");
-		}
+		}else{ }
 	});
 
-	/*var LOG = logger.getInstance('sioWebApp');
-	 LOG.log('This is a log');
-	 LOG.info('This is a info');
-	 LOG.warn('This is a warn');
-	 //	LOG.error('This is a {0} error! {1}', [ 'big', 'just kidding' ]);
-	 LOG.debug('This is a debug for line {0}', [ 8 ]);
-
-	 var numbers = [10, 5, 100, 3, 1000];
-	 LOG.debug(_.min(numbers));*/
+    $ionicPlatform.registerBackButtonAction(function () {
+        console.info("state:"+$state.current.name)
+        if ($state.current.name == '/'){
+            navigator.app.exitApp();
+        } else {
+            window.history.back();
+        }
+    }, 100);
 });
-

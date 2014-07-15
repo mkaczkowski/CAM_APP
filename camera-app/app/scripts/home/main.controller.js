@@ -6,10 +6,10 @@ angular.module('sioWebApp.home').controller('MainCtrl', function ($scope, camera
 
 	$scope.getPicture = function(){
 
-		LOG.info("getPicture try");
+		LOG.info("getPicture try:"+configuration.isProd);
 		if(configuration.isProd) {
 			cameraService.getPicture(function(imageData){
-				console.info("imageData1:"+imageData);
+//				console.info("imageData1:"+imageData);
 				dataService.pictureDataUrl = "data:image/jpeg;base64," + imageData;
                 $state.go('crop')
 			});
@@ -22,7 +22,7 @@ angular.module('sioWebApp.home').controller('MainCtrl', function ($scope, camera
 	$scope.loadImage = function(){
 		if(configuration.isProd) {
 			cameraService.loadImageFromLibrary(function(imageData){
-				console.info("imageData2:"+imageData);
+//				console.info("imageData2:"+imageData);
 				dataService.pictureDataUrl = imageData;
                 $state.go('crop')
 			});

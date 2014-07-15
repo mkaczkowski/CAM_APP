@@ -82,6 +82,7 @@ angular.module('sioWebApp.home').controller('CanvasCtrl', function ($scope, $tim
 	};
 
 	$scope.showFilters = function () {
+        loadingService.show();
 		mySharedService.prepForBroadcast(null);
 		imageService.imgToCanvas('canvas', function (canvas) {
 			dataService.alteredDataUrl = canvas.toDataURL();

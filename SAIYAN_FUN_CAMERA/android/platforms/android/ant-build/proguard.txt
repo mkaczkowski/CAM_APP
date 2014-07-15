@@ -1,5 +1,5 @@
 # view AndroidManifest.xml #generated:6
--keep class com.camerapps.saiyan.SaiyanCamera { <init>(...); }
+-keep class com.camerapp.saiya.SaiyanCamer { <init>(...); }
 
 # view AndroidManifest.xml #generated:13
 -keep class com.google.android.gms.ads.AdActivity { <init>(...); }
