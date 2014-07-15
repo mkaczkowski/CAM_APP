@@ -1,20 +1,17 @@
-<div class="bar bar-header" data-ng-class="app.barStyle" style="height: 45px">
-    <h1 class="title" ng-bind="app.name"></h1>
-    <button class="button icon ion-beer" ng-click="rateUs()"></button>
+<div class="bar bar-header bar-light" style="height: 45px;background-color: rgba(0,0,0,0)">
+    <h1 class="title" style="font-weight: bold"  ng-bind="app.name"></h1>
+    <button class="button button-dark icon ion-beer" ng-click="rateUs()"></button>
 </div>
-
 <div style="position: absolute; top: 45px; bottom: 0px; left: 0px; right: 0px;">
-
     <div style="display: table; height: 100%; width: 100%">
         <div style="display: table-cell; vertical-align: middle">
-            <div style="margin-left: auto; margin-right: auto; text-align: center">
-                <p style="font-size: 18px; font-weight: bold">Choose your picture</p>
-                <div class="button-bar-inline">
-                    <button class="button button-medium icon ion-android-camera" style="width: 45px;height: 45px;margin-left: 4px" ng-click="getPicture()"/>
-                    <button class="button button-medium icon ion-android-image" style="width: 45px;height: 45px;margin-left: 4px"  ng-click="loadImage()"/>
+            <div  style="display:table;margin-left: auto; margin-right: auto; text-align: center; background-color: rgba(255,255,255,0.6); padding: 18px">
+                <p style="font-size: 26px;line-height: 30px; font-weight: bold; color: rgb(32, 32, 32)">Choose your <br>picture</p>
+                <div class="button-bar-inline padding" style="display:inline-block;background-color: rgba(255,255,255,0.45); margin-top: 7px;border-radius: 7px;">
+                    <button class="button button-icon icon-camera" style="width: 70px;height: 70px;" ng-click="getPicture()"/>
+					<button class="button button-icon icon-image" style="width: 70px;height: 70px;margin-left: 10px; margin-right: 10px" ng-click="loadImage()"/>
                 </div>
             </div>
         </div>
     </div>
 </div>
-

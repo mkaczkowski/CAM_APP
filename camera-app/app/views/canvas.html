@@ -1,13 +1,13 @@
-<div class="bar bar-header" data-ng-class="app.barStyle" style="height: 45px">
+<div class="bar bar-header bar-light" style="height: 45px;background-color: rgba(0,0,0,0)">
     <div style="width: 100%; text-align: left">
         <button class="button button-icon icon ion-arrow-left-c" ng-click="goBack()" />
-        <button class="button button-medium icon ion-android-trash"  ng-click="clearWhiteboard()"/>
+        <button class="button button-light button-medium icon ion-android-trash"  ng-click="clearWhiteboard()"/>
     </div>
 
     <div style="width: 100%; text-align: right">
-        <button class="button button-medium icon ion-android-star"  ng-click="showFilters()"/>
-        <button class="button button-medium icon ion-android-checkmark"  data-ng-class="isEmpty ? 'disabled' : ''" ng-click="saveCanvasToFile()"/>
-        <button class="button button-medium icon ion-android-share"  data-ng-class="isEmpty ? 'disabled' : ''" ng-click="sharePicure()"/>
+        <button class="button button-energized button-medium icon ion-android-star"  ng-click="showFilters()"/>
+        <button class="button button-balanced button-medium icon ion-android-checkmark"  data-ng-class="isEmpty ? 'disabled' : ''" ng-click="saveCanvasToFile()"/>
+        <button class="button button-positive button-medium icon ion-android-share"  data-ng-class="isEmpty ? 'disabled' : ''" ng-click="sharePicure()"/>
     </div>
 </div>
 
@@ -39,7 +39,7 @@
     </div>
 </div>
 
-<div class="bar bar-footer bar-light" style="height: 70px" disabled="!isCropped ? 'disabled' : '' ">
+<div class="bar bar-footer bar-light" style="height: 70px;rgba(255,255,255,0.7)" disabled="!isCropped ? 'disabled' : '' ">
     <carousel path="data/data.json"><!--data from json--></carousel>
 </div>
 <!--</div>-->
