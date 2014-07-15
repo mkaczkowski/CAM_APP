@@ -1,13 +1,17 @@
 ﻿'use strict';
-var mySharedService = angular.module('sioWebApp.common').factory('mySharedService', function($rootScope, logger) {
+var mySharedService = angular.module('sioWebApp.common').factory('mySharedService', function($rootScope, $compile) {
 
 //	var LOG = logger.getInstance('mySharedService')
 
 	var sharedService = {};
 
-	var elements = {};
-
-	var elementData = {
+	sharedService.isInited = false;
+	sharedService.elementData = {
+		scope: null,
+		id: null,
+		src: null,
+		x:0,
+		y:0,
 		posX : 0,
 		posY : 0,
 		lastPosX : 0,
@@ -21,13 +25,19 @@ var mySharedService = angular.module('sioWebApp.common').factory('mySharedServic
 		dragReady : 0,
 		isMirror:false,
 		opacity: 1,
-        brightness: 1
+		brightness: 1
 	}
 
-	var currentElement = {};
-	var currentElementData = {};
+	sharedService.currentElement = {};
+	sharedService.currentElementData = {};
+	sharedService.elements = {};
+
+	sharedService.elementsCount = function() {
+		return Object.keys(sharedService.elements).length;
+	}
 
 	sharedService.init = function() {
+
 		var options = {
 			transform_always_block: true,
 			transform_min_scale: 1,
@@ -59,6 +69,13 @@ var mySharedService = angular.module('sioWebApp.common').factory('mySharedServic
 
 			manageMultitouch(ev,sharedService.currentElement,sharedService.currentElementData);
 		});
+
+		if(sharedService.isInited){
+			sharedService.restoreElements();
+			return;
+		}
+
+		sharedService.isInited = true;
 	};
 
 	function manageMultitouch(ev,elementObj,elementData) {
@@ -114,24 +131,31 @@ var mySharedService = angular.module('sioWebApp.common').factory('mySharedServic
 		}
 	}
 
-    sharedService.applyBrightness = function (elementObj, value) {
-        if(value){
-            elementObj.style.webkitFilter = "brightness("+(value*100)+"%)";
-            elementObj.style.filter = "brightness("+(value*100)+"%)";
-        }
-    }
-
+	sharedService.applyBrightness = function (elementObj, value) {
+		if(value){
+			elementObj.style.webkitFilter = "brightness("+(value*100)+"%)";
+			elementObj.style.filter = "brightness("+(value*100)+"%)";
+		}
+	}
 
 	sharedService.addElement = function (element, scope) {
+
+		var newData = JSON.parse(JSON.stringify(sharedService.elementData));
+		newData.scope = scope;
+		newData.x = scope.left;
+		newData.y = scope.top;
+		newData.src = scope.src;
+		newData.id  = makeid();
+		sharedService.elements[newData.id] = newData;
+//		console.log("elements add:"+sharedService.elementsCount());
+
 		element.css({top:scope.top,left:scope.left});
-		element.attr("data-id",makeid());
 
 		var newElement = element.get(0);
-		var newData = JSON.parse(JSON.stringify(elementData));
-		elements[element.attr("data-id")] = newData;
-
 		sharedService.currentElement = newElement;
 		sharedService.currentElementData = newData;
+
+		element.attr("data-id",newData.id);
 
 		function makeid() {
 			var text = "";
@@ -142,8 +166,9 @@ var mySharedService = angular.module('sioWebApp.common').factory('mySharedServic
 		}
 	};
 
+
 	sharedService.getElement = function (element) {
-		return elements[element];
+		return sharedService.elements[element];
 	};
 
 	sharedService.prepForBroadcast = function(msg) {
@@ -164,7 +189,6 @@ var mySharedService = angular.module('sioWebApp.common').factory('mySharedServic
 	};
 
 	sharedService.mirror = function(){
-
 		sharedService.currentElementData.isMirror = !sharedService.currentElementData.isMirror;
 		var transform = "translate(" + sharedService.currentElementData.lastPosX + "px," + sharedService.currentElementData.lastPosY + "px) ";
 		transform += "rotate(" + sharedService.currentElementData.last_rotation + "deg) ";
@@ -177,36 +201,62 @@ var mySharedService = angular.module('sioWebApp.common').factory('mySharedServic
 		sharedService.applyOpacity(sharedService.currentElement, value);
 	};
 
-    sharedService.changeBrightness = function(value){
-        sharedService.currentElementData.brightness = value;
-        sharedService.applyBrightness(sharedService.currentElement, value);
-    };
+	sharedService.changeBrightness = function(value){
+		sharedService.currentElementData.brightness = value;
+		sharedService.applyBrightness(sharedService.currentElement, value);
+	};
 
 	sharedService.removeElement = function(){
+//		console.log("elements pre:"+sharedService.elementsCount())
+		delete sharedService.elements[angular.element(sharedService.currentElement).attr("data-id")];
+//		console.log("elements post:"+sharedService.elementsCount())
 		$rootScope.$broadcast('removeElement');
 		this.prepForBroadcast(null);
 	};
 
 	sharedService.clearAll = function() {
+		sharedService.elements = {};
+//		console.log("elements clear all:"+sharedService.elementsCount())
 		var fullScreenContainer = document.getElementById('fullscreenContainer')
 		if(fullScreenContainer){
 			fullScreenContainer.src = "";
 		}
-		$rootScope.$broadcast('clearAll');
+
 		this.prepForBroadcast(null);
+		$rootScope.$broadcast('clearAll');
+		angular.element(".drag-and-drop").remove();
 	};
 
 	sharedService.resetElement = function(){
 		sharedService.currentElementData = JSON.parse(JSON.stringify(sharedService.elementData));
-		elements[currentElement.className] = currentElementData;
+		sharedService.elements[angular.element(sharedService.currentElement).attr("data-id")] = sharedService.currentElementData;
 		var transform = "translate(" + sharedService.currentElementData.lastPosX + "px," + sharedService.currentElementData.lastPosY + "px) ";
 		transform += "rotate(" + sharedService.currentElementData.rotation + "deg) ";
 		transform += "scale(" + sharedService.currentElementData.scale + "," + sharedService.currentElementData.scale + ")";
 		sharedService.applyTransform(sharedService.currentElement, transform);
 	};
 
-	sharedService.message;
+	sharedService.restoreElement = function(element, dataId){
+		var data = 	sharedService.elements[dataId];
+		element.css({top:data.y,left:data.x});
+		element.attr("data-id",dataId);
 
+		var transform = "translate(" + data.lastPosX + "px," + data.lastPosY + "px) ";
+		transform += "rotate(" + data.last_rotation + "deg) ";
+		transform += "scale(" + (data.isMirror ? -data.last_scale : data.last_scale) + "," + data.last_scale + ")";
+		sharedService.applyTransform(element.get(0), transform);
+	};
+
+	sharedService.restoreElements = function(){
+		var containerElement = angular.element(document.getElementById('draggableContainer'));
+		angular.forEach(Object.keys(sharedService.elements),function(key){
+			var value = sharedService.elements[key];
+			var newElement = $compile('<draggable-item id="'+value.id+'" src="'+value.src+'" top="'+value.y+'px" left="'+value.x+'px"/>')(value.scope);
+			containerElement.append(newElement);
+		})
+	}
+
+	sharedService.message;
 	return sharedService;
 });
 
@@ -217,6 +267,7 @@ angular.module('sioWebApp.common').directive("draggableItem", function (myShared
 		replace: true,
 		piority: 10000,
 		scope: {
+			id:  '@',
 			src:  '@',
 			top:  '@',
 			left: '@'
@@ -237,8 +288,6 @@ angular.module('sioWebApp.common').directive("draggableItem", function (myShared
 			};
 		},
 		link: function (scope, element) {
-
-			mySharedService.addElement(element, scope);
 
 			scope.$on('handleBroadcast', function() {
 				var tmpIsSelected = (mySharedService.message == element);
@@ -272,11 +321,6 @@ angular.module('sioWebApp.common').directive("draggableItem", function (myShared
 				}
 			});
 
-
-			scope.$on('clearAll', function() {
-				element.remove();
-			});
-
 			var verifyBorder = function(){
 				var imgElement = element;
 				if(!scope.isSelected){
@@ -286,15 +330,17 @@ angular.module('sioWebApp.common').directive("draggableItem", function (myShared
 				}
 			}
 
-			verifyBorder();
-
 			element.bind('click touchstart', function (event) {
 				mySharedService.prepForBroadcast(element);
 			})
 
-//            element.on('$destroy', function() {
-//                //console.log("destroy element");
-//            });
+			if(scope.id){
+				mySharedService.restoreElement(element,scope.id);
+			}else{
+				mySharedService.addElement(element, scope);
+				verifyBorder();
+			}
+
 		}
 	};
 })
@@ -352,7 +398,7 @@ angular.module('sioWebApp.common').directive('carousel', function($compile) {
 						containerElement = angular.element(document.getElementById('draggableContainer'));
 						var offsetTop = (containerElement.height() - heightAttr - 56)/2;
 						var offsetLeft = (containerElement.width() - widthAttr)/2;
-						var newElement = $compile('<draggable-item id="1" src="'+srcAttr+'" top="'+offsetTop+'px" left="'+offsetLeft+'px"/>')(scope);
+						var newElement = $compile('<draggable-item id="" src="'+srcAttr+'" top="'+offsetTop+'px" left="'+offsetLeft+'px"/>')(scope);
 						containerElement.append(newElement);
 					}
 				})

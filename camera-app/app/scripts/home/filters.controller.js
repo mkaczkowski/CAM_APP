@@ -7,26 +7,43 @@
  * # MainCtrl
  * Controller of the sioWebApp
  */
-angular.module('sioWebApp.home').controller('FiltersCtrl', function ($scope, notificationService, configuration, logger,dataService) {
+angular.module('sioWebApp.home').controller('FiltersCtrl', function ($scope, notificationService, configuration, logger,dataService,
+		loadingService,imageService,sharingService) {
 	var LOG = logger.getInstance('FiltersCtrl');
 
 	$scope.pictureUrl = dataService.alteredDataUrl;
 
 	$scope.filterCanvas = function (filterName) {
+		loadingService.show();
 		var myimage = new Image();
 		myimage.onload = function (data) {
             var dataUrl = data.currentTarget.attributes["0"].nodeValue;
-            console.log(dataUrl);
 			var filteredCanvas = angular.element(document.getElementById("filteredCanvas"));
             filteredCanvas.html('<img id="filteredContainer" src=' + dataUrl + ' />');
 			Caman('#filteredContainer', function () {
 				this[filterName]();
 				this.render(function(){
-//					hide();
+					loadingService.hide();
 				});
 			});
 		}
 		myimage.src = $scope.pictureUrl;
+	};
+
+	$scope.saveCanvasToFile = function(successHandler) {
+		imageService.saveCanvasToFile('filteredCanvas',function(canvas,path){
+			if (successHandler) {
+				successHandler(canvas)
+			} else {
+				notificationService.savedConfirm(path, function () { $scope.sharePicure() });
+			}
+		})
+	}
+
+	$scope.sharePicure = function(){
+		$scope.saveCanvasToFile(function(canvas){
+			sharingService.shareViaFacebook(canvas.toDataURL());
+		});
 	};
 
     $scope.goBack = function() {

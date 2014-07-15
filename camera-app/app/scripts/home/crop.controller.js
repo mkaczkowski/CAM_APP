@@ -10,9 +10,7 @@
 angular.module('sioWebApp.home').controller('CropCtrl', function ($scope, notificationService, configuration, logger,$state, dataService, $timeout) {
 	var LOG = logger.getInstance('CropCtrl');
 
-
     $scope.crop;
-
 	$scope.cropImage = function(imageData){
 
 		var canvas = angular.element(document.getElementById("canvasView"));

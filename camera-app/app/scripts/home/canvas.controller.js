@@ -8,7 +8,7 @@
  * Controller of the sioWebApp
  */
 angular.module('sioWebApp.home').controller('CanvasCtrl', function ($scope, $timeout, mySharedService,
-		notificationService, configuration, logger, dataService, $state, imageService, sharingService) {
+		notificationService, configuration, logger, dataService, $state, imageService, sharingService, loadingService) {
 
 	var LOG = logger.getInstance('CanvasCtrl');
 
@@ -83,51 +83,24 @@ angular.module('sioWebApp.home').controller('CanvasCtrl', function ($scope, $tim
 
 	$scope.showFilters = function () {
 		mySharedService.prepForBroadcast(null);
-		$scope.imgToCanvas('canvas', function (canvas) {
+		imageService.imgToCanvas('canvas', function (canvas) {
 			dataService.alteredDataUrl = canvas.toDataURL();
-
 			$timeout(function(){
                 $state.go('filters')
 			},100);
-
 		});
 	};
 
-
-	$scope.saveCanvasToFile = function(successHandler){
-//		show();
+	$scope.saveCanvasToFile = function(successHandler) {
 		mySharedService.prepForBroadcast(null);
-		$timeout(function(){
-			$scope.imgToCanvas('canvas',function(canvas){
-				$scope.dataUrl = canvas.toDataURL();
-				if(!configuration.isProd){  window.open($scope.dataUrl) }
-				else{
-					imageService.saveCanvasToFile(canvas,
-							function(msg){
-//								hide();
-								if(successHandler){
-									successHandler(canvas)
-								}else{
-									notificationService.savedConfirm(msg,
-											function () {$scope.sharePicure()});
-								}
-							},function(err){
-//								hide();
-								LOG.error("saveCanvasToFile err:{0}",[err])
-								notificationService.showError("Ooops. Something went wrong.")
-							});
-				}
-			});
-		},500);
-	};
-
-	$scope.imgToCanvas = function (canvasId,successHandler) {
-		html2canvas( [ document.getElementById(canvasId) ], {
-			onrendered: function (canvas) {
+		imageService.saveCanvasToFile('canvas',function(canvas,path){
+			if (successHandler) {
 				successHandler(canvas)
+			} else {
+				notificationService.savedConfirm(path, function () { $scope.sharePicure() });
 			}
-		});
-	};
+		})
+	}
 
 	$scope.sharePicure = function(){
 		$scope.saveCanvasToFile(function(canvas){
