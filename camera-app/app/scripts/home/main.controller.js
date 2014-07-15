@@ -5,9 +5,11 @@ angular.module('sioWebApp.home').controller('MainCtrl', function ($scope, camera
 	var LOG = logger.getInstance('MainCtrl');
 
 	$scope.getPicture = function(){
+
+		LOG.info("getPicture try");
 		if(configuration.isProd) {
 			cameraService.getPicture(function(imageData){
-				mySharedService.clearAll();
+				console.info("imageData1:"+imageData);
 				dataService.pictureDataUrl = "data:image/jpeg;base64," + imageData;
                 $state.go('crop')
 			});
@@ -20,6 +22,7 @@ angular.module('sioWebApp.home').controller('MainCtrl', function ($scope, camera
 	$scope.loadImage = function(){
 		if(configuration.isProd) {
 			cameraService.loadImageFromLibrary(function(imageData){
+				console.info("imageData2:"+imageData);
 				dataService.pictureDataUrl = imageData;
                 $state.go('crop')
 			});
@@ -28,12 +31,4 @@ angular.module('sioWebApp.home').controller('MainCtrl', function ($scope, camera
             $state.go('crop')
 		}
 	};
-
-
-//	notificationService.showInitPopup($scope.getPicture, $scope.loadImage);
-	/*if(configuration.isProd) {
-		notificationService.showInitPopup($scope.getPicture, $scope.loadImage);
-	}else{
-		document.getElementById("pictureContainer").src = "data/background.jpg";
-	}*/
 });

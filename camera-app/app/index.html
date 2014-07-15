@@ -20,8 +20,8 @@
 	</style>
 </head>
 
-<body ng-app="sioWebApp" data-ng-controller="AppCtrl" style="height: 100%; background: url('data/wallpaper.jpg') no-repeat center center fixed;
--webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+<body ng-app="sioWebApp" data-ng-controller="AppCtrl" style="height: 100%;">
+<img src="data/wallpaper.jpg" style="width: 100%; height: 100%; position: absolute; top: 0px; left: 0px">
 
 <div class="slide-left-right"  style="position:absolute; top: 0px; bottom: 0px; left: 0px; right: 0px;">
 	<div class="bar bar-header bar-light" style="height: 45px; background-color: rgba(255, 255, 255, 0.92)"></div>
@@ -104,9 +104,7 @@
 
 <script>
 	FastClick.attach(document.body, {});
-
 </script>
-
 
 </body>
 </html>
