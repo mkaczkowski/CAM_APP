@@ -75,7 +75,13 @@ angular.module('sioWebApp.home').directive('carouselfilters', function() {
 				var content = "";
 				for(var i in data["filters"]){
 					var name = data["filters"][i].name;
-					content += "<div class='item item-light' style='padding: 7px; height: 69px;line-height: 69px;text-align: center;'><button class='thumb-filter' data-filter='"+name+"' style='width: 100%; height: 100%;'>"+name+"</button></div>";
+					var path = "data/filters/"+data["filters"][i].path;
+				/*	content += "<div class='item item-light' style='padding: 7px; height: 69px;line-height: 69px;text-align: center;'>" +
+							"<img class='thumb-filter' data-filter='"+name+"' style='max-width: 100%; max-height: 100%;' src='"+path+"'>"
+							"<p style='width: 100%;'>"+name+"</p>" +
+							"</div>";*/
+
+					content += "<div class='item item-light' style='padding: 2px 0px 5px 0px; height: 65px;line-height: 65px;text-align: center;'><img class='thumb-filter' data-filter='"+name+"' style='max-width: 100%; max-height: 100%;' src='"+path+"'  ></div>";
 				}
 				element.html(content);
 				applyHandlers();

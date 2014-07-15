@@ -4,7 +4,7 @@
         <button class="button button-light button-medium icon ion-android-trash"  ng-click="clearWhiteboard()"/>
     </div>
 
-    <div style="width: 100%; text-align: right">
+    <div style="width: 100%; text-align: right; display:inherit">
         <button class="button button-energized button-medium icon ion-android-star" style="margin-left: 8px;" ng-click="showFilters()"/>
         <button class="button button-balanced button-medium icon ion-android-checkmark" style="margin-left: 8px;"  data-ng-class="isEmpty ? 'disabled' : ''" ng-click="saveCanvasToFile()"/>
         <button class="button button-positive button-medium icon ion-android-share" style="margin-left: 8px;" data-ng-class="isEmpty ? 'disabled' : ''" ng-click="sharePicure()"/>
