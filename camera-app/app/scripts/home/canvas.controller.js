@@ -8,7 +8,7 @@
  * Controller of the sioWebApp
  */
 angular.module('sioWebApp.home').controller('CanvasCtrl', function ($scope, $timeout, mySharedService,
-		notificationService, configuration, logger, dataService, $state, imageService, sharingService, loadingService) {
+		notificationService, configuration, logger, dataService, $state, imageService, sharingService, loadingService, networkService) {
 
 	var LOG = logger.getInstance('CanvasCtrl');
 
@@ -107,6 +107,10 @@ angular.module('sioWebApp.home').controller('CanvasCtrl', function ($scope, $tim
 		$scope.saveCanvasToFile(function(canvas){
 			sharingService.shareViaFacebook(canvas.toDataURL());
 		});
+	};
+
+	$scope.rateUs = function(){
+		networkService.openMarketURL(configuration.marketUrl)
 	};
 
     $scope.goBack = function() {
