@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.dragon.camera1" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Dragon Camera1</name>
+<widget id="com.camerapp.saiya" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Saiyan Camer</name>
     <description>
-        Dragon Camera1
+        Saiyan Fun Camer
     </description>
-    <author email="dragon@camera1.com" href="http://dragoncamera1.com/">
-      Dragon Camera1 Team
+    <author email="jolanta.mandary@onet.pl" href="http://camerapp.com/">
+      CamerApp
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -14,15 +14,13 @@
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
 	<preference name="Orientation" value="portrait" />
-	<preference name="android-minSdkVersion" value="10" />
+	<preference name="android-minSdkVersion" value="11" />
 
     <!-- Don't store local date in an iCloud backup. Turn this to "cloud" to enable storage 
          to be sent to iCloud. Note: enabling this could result in Apple rejecting your app.
     -->
     <preference name="BackupWebStorage" value="none" />
 
-	<icon src="icon/icon.png" />
-	 
     <feature name="StatusBar">
       <param name="ios-package" value="CDVStatusBar" onload="true" />
     </feature>

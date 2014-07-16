@@ -2,12 +2,12 @@
 angular.module('sioWebApp.config', [])
 		.constant('configuration', {
 			name : 'Saiyan Camera',
-			barStyle : 'bar-energized',
+			titleColor : '#EBEBEB',
 			version : '1.0.0',
             marketUrl: 'com.camerapps.saiyan',
 			admobBannerKey : '',
 			admobInterKey : '',
 			admobInter2Key : '',
-			isProd: JSON.parse('false')
+			isProd: JSON.parse('true')
 		}
 );
