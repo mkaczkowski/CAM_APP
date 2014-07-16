@@ -59,21 +59,19 @@ sioWebApp.run(function($rootScope,configuration,$ionicPlatform,$state,$timeout,l
 	$rootScope.app = configuration;
 	$ionicPlatform.ready(function() {
 		LOG.info("$ionicPlatform - ready");
-		if(networkService.isOnline()){
-			admobService.init();
-			admobService.createBanner();
-			$timeout(function(){
-				admobService.createInterstitial();
-			},1000)
-		}else{ }
+		admobService.init();
+		admobService.createBanner();
+		$timeout(function(){
+			admobService.showHomeAd();
+		},1000)
 	});
 
-    $ionicPlatform.registerBackButtonAction(function () {
-        console.info("state:"+$state.current.name)
-        if ($state.current.name == '/'){
-            navigator.app.exitApp();
-        } else {
-            window.history.back();
-        }
-    }, 100);
+	$ionicPlatform.registerBackButtonAction(function () {
+		console.info("state:"+$state.current.name)
+		if ($state.current.name == '/'){
+			navigator.app.exitApp();
+		} else {
+			window.history.back();
+		}
+	}, 100);
 });

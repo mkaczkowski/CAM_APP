@@ -6,8 +6,11 @@ angular.module('sioWebApp.config', [])
 			version : '1.0.0',
             marketUrl: 'com.camerapps.saiyan',
 			admobBannerKey : '',
-			admobInterKey : '',
-			admobInter2Key : '',
-			isProd: JSON.parse('true')
+			admobHomeKey : '',
+			admobSaveKey : '',
+			admobShareKey: '',
+			admobBackToHomeKey: '',
+			isProd: JSON.parse('false'),
+			showAds: JSON.parse('false')
 		}
 );

@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the sioWebApp
  */
-angular.module('sioWebApp.home').controller('CropCtrl', function ($scope, notificationService, configuration, logger,$state, dataService, $timeout) {
+angular.module('sioWebApp.home').controller('CropCtrl', function ($scope, notificationService, configuration, logger,$state, dataService, $timeout, admobService) {
     var LOG = logger.getInstance('CropCtrl');
 
     $scope.crop;
@@ -68,7 +68,10 @@ angular.module('sioWebApp.home').controller('CropCtrl', function ($scope, notifi
     }
 
     $scope.goBack = function() {
-        window.history.back();
+		$timeout(function(){
+			admobService.showBackToHomeAd()
+		},1000)
+		window.history.back();
     };
 
     //$scope.cropImage(dataService.pictureDataUrl);

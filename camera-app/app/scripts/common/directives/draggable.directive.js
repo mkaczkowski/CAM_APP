@@ -350,9 +350,10 @@ angular.module('sioWebApp.common').directive('carousel', function($compile) {
 		restrict: 'E',
 		replace: true,
 		transclude: true,
-		template: '<div class="myCarousel" style="width: 100%;" ng-transclude></div>',
+		template: '<div class="myCarousel" style="width: 100%; height: {{height}}" ng-transclude></div>',
 		scope: {
-			path : '@'
+			path : '@',
+			height : '@'
 		},
 		link: function(scope, element) {
 

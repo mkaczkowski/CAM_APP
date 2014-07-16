@@ -19,7 +19,7 @@ angular.module('sioWebApp.common').factory('imageService', function(configuratio
 		imagePath = "www/img/christmas.jpeg";             // Mention the complete path to your image. If it contains under multiple folder then mention the path from level "www" to the level your image contains with its name including its extension.
 		wallpaper.setImage(imagePath, imageTitle, folderName, successHandler, faultHandler);
 		// For saving image
-		//  wallpaper.saveImage(imagePath, imageTitle, folderName, success, error);     
+		//  wallpaper.saveImage(imagePath, imageTitle, folderName, success, error);
 	};
 
 	imageService.saveCanvasToFile = function(canvasId,successHandler){
