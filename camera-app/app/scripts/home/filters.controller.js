@@ -47,10 +47,13 @@ angular.module('sioWebApp.home').controller('FiltersCtrl', function ($scope, not
 	};
 
     $scope.goBack = function() {
+//        loadingService.show();
         window.history.back();
     };
 
+    loadingService.hide();
     $scope.filterCanvas("pinhole");
+
 });
 
 angular.module('sioWebApp.home').directive('carouselfilters', function() {

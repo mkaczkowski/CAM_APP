@@ -89,40 +89,40 @@
     },
     "installed_plugins": {
         "com.google.playservices": {
-            "PACKAGE_NAME": "com.camerapps.saiyan"
+            "PACKAGE_NAME": "com.camerapp.saiya"
         },
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "com.camerapps.saiyan"
+            "PACKAGE_NAME": "com.camerapp.saiya"
         },
         "com.rjfun.cordova.plugin.admob": {
-            "PACKAGE_NAME": "com.camerapps.saiyan"
+            "PACKAGE_NAME": "com.camerapp.saiya"
         },
         "com.xmartlabs.cordova.market": {
-            "PACKAGE_NAME": "com.camerapps.saiyan"
+            "PACKAGE_NAME": "com.camerapp.saiya"
         },
         "nl.x-services.plugins.socialsharing": {
-            "PACKAGE_NAME": "com.camerapps.saiyan"
+            "PACKAGE_NAME": "com.camerapp.saiya"
         },
         "org.apache.cordova.camera": {
-            "PACKAGE_NAME": "com.camerapps.saiyan"
+            "PACKAGE_NAME": "com.camerapp.saiya"
         },
         "org.apache.cordova.console": {
-            "PACKAGE_NAME": "com.camerapps.saiyan"
+            "PACKAGE_NAME": "com.camerapp.saiya"
         },
         "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.camerapps.saiyan"
+            "PACKAGE_NAME": "com.camerapp.saiya"
         },
         "org.apache.cordova.dialogs": {
-            "PACKAGE_NAME": "com.camerapps.saiyan"
+            "PACKAGE_NAME": "com.camerapp.saiya"
         },
         "org.apache.cordova.file": {
-            "PACKAGE_NAME": "com.camerapps.saiyan"
+            "PACKAGE_NAME": "com.camerapp.saiya"
         },
         "org.apache.cordova.network-information": {
-            "PACKAGE_NAME": "com.camerapps.saiyan"
+            "PACKAGE_NAME": "com.camerapp.saiya"
         },
         "org.devgeeks.Canvas2ImagePlugin": {
-            "PACKAGE_NAME": "com.camerapps.saiyan"
+            "PACKAGE_NAME": "com.camerapp.saiya"
         }
     },
     "dependent_plugins": {}

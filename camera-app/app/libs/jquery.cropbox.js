@@ -221,10 +221,10 @@
                 this.update();
             },
             zoomIn: function() {
-                this.zoom(this.percent + (1 - this.minPercent) / (this.options.zoom - 1 || 1));
+                this.zoom(this.percent - (1 - this.minPercent) / (this.options.zoom - 1 || 1));
             },
             zoomOut: function() {
-                this.zoom(this.percent - (1 - this.minPercent) / (this.options.zoom - 1 || 1));
+                this.zoom(this.percent + (1 - this.minPercent) / (this.options.zoom - 1 || 1));
             },
             mirror: function() {
                 this.scale = -(this.scale);

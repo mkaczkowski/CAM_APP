@@ -245,6 +245,8 @@ var mySharedService = angular.module('sioWebApp.common').factory('mySharedServic
 		transform += "rotate(" + data.last_rotation + "deg) ";
 		transform += "scale(" + (data.isMirror ? -data.last_scale : data.last_scale) + "," + data.last_scale + ")";
 		sharedService.applyTransform(element.get(0), transform);
+        sharedService.applyOpacity(element.get(0),data.opacity);
+        sharedService.applyBrightness(element.get(0),data.brightness);
 	};
 
 	sharedService.restoreElements = function(){

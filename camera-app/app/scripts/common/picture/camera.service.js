@@ -20,10 +20,9 @@ angular.module('sioWebApp.common').factory('cameraService', function($cordovaCam
 	};
 
 	cameraService.getPicture = function(successHandler){
-		cameraService.takePhotoOptions.targetHeight = document.body.clientHeight - 60 - 45;
-		cameraService.takePhotoOptions.targetWidth = document.body.clientWidth;
+		cameraService.takePhotoOptions.targetHeight = document.body.clientHeight;// - 60 - 45;
+        /*cameraService.takePhotoOptions.targetWidth = document.body.clientWidth;*/
 		$cordovaCamera.getPicture(cameraService.takePhotoOptions).then(function(imageData){
-//					LOG.info("getPicture success:{0}",[imageData]);
                     successHandler(imageData);
 				}, function(err) {
 					LOG.error("getPicture error:{0}",[err])
@@ -33,10 +32,9 @@ angular.module('sioWebApp.common').factory('cameraService', function($cordovaCam
 	};
 
 	cameraService.loadImageFromLibrary = function(successHandler) {
-		cameraService.takePhotoOptions.targetHeight = document.body.clientHeight - 60 - 45;
-		cameraService.takePhotoOptions.targetWidth = document.body.clientWidth;
+		cameraService.takePhotoOptions.targetHeight = document.body.clientHeight;// - 60 - 45;
+        /*cameraService.takePhotoOptions.targetWidth = document.body.clientWidth;*/
 		$cordovaCamera.getPicture(cameraService.loadImageOptions).then(function (imageData) {
-//			LOG.info("loadImageFromLibrary imageURI:{0}",[imageData])
             successHandler(imageData);
 		}, function (err) {
 			LOG.error("loadImageFromLibrary error:{0}",[err])

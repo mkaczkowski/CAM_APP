@@ -4,7 +4,7 @@ angular.module('sioWebApp.common').factory('imageService', function(configuratio
 
 	var imageService = {};
 
-	imageService.saveCanvasToFile = function(canvas, successHandler, faultHandler) {
+	imageService.saveCanvas = function(canvas, successHandler, faultHandler) {
 		if(!window.canvas2ImagePlugin) {
 			faultHandler()
 			return;
@@ -27,11 +27,10 @@ angular.module('sioWebApp.common').factory('imageService', function(configuratio
 		imageService.imgToCanvas(canvasId,function(canvas){
 			if(!configuration.isProd){  loadingService.hide(); window.open(canvas.toDataURL()) }
 			else{
-				imageService.saveCanvasToFile(canvas,
+				imageService.saveCanvas(canvas,
 						function(path){
 							loadingService.hide();
 							successHandler(canvas,path);
-
 						},function(err){
 							loadingService.hide();
 							LOG.error("saveCanvasToFile err:{0}",[err])
@@ -42,8 +41,10 @@ angular.module('sioWebApp.common').factory('imageService', function(configuratio
 	};
 
 	imageService.imgToCanvas = function (canvasId,successHandler) {
+        LOG.info("imgToCanvas canvasId:{0}",[canvasId])
 		html2canvas( [ document.getElementById(canvasId) ], {
 			onrendered: function (canvas) {
+                LOG.info("imgToCanvas onrendered")
 				successHandler(canvas)
 			}
 		});

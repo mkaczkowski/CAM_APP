@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
 	<link rel="stylesheet" href="../bower_components/ionic/release/css/ionic.css" />
 	<link rel="stylesheet" href="styles/main.css">
-	<link rel="stylesheet" href="../bower_components/jquery-cropbox/jquery.cropbox.css" />
+	<!--<link rel="stylesheet" href="../bower_components/jquery-cropbox/jquery.cropbox.css" />-->
 	<link rel="stylesheet" href="styles/owl.carousel.css">
 	<link rel="stylesheet" href="styles/owl.theme.css">
 	<!-- endbuild -->
@@ -24,11 +24,11 @@
 <img src="data/wallpaper.jpg" style="width: 100%; height: 100%; position: absolute; top: 0px; left: 0px">
 
 <div class="slide-left-right"  style="position:absolute; top: 0px; bottom: 0px; left: 0px; right: 0px;">
-	<div class="bar bar-header bar-light" style="height: 45px; background-color: rgba(255, 255, 255, 0.92)"></div>
+	<div class="bar bar-header bar-light" style="height: 45px; background-color: rgba(255, 255, 255, 0.78)"></div>
     <div style="height: 100%;width: 100%" ui-view></div>
 </div>
 
-<p style="position: absolute;bottom: 0px;width: 100%; color: #1a1a1a; font-size: 13px;text-align: center;font-weight: bold">© camerapps</p>
+<!--<p style="position: absolute;bottom: 0px;width: 100%; color: #1a1a1a; font-size: 13px;text-align: center;font-weight: bold">© camerapps</p>-->
 
 <!-- grunt wiredep:app -->
 <!-- build:js(.) scripts/vendor.js -->
@@ -53,7 +53,7 @@
 <!-- endbower -->
 <!-- endbuild -->
 
-<script src="libs/jquery.cropbox.js"></script>
+<!--<script src="libs/jquery.cropbox.js"></script>-->
 <script src="libs/instagram.js"></script>
 <script src="libs/ng-cordova.js"></script>
 <script src="libs/owl.carousel.js"></script>
@@ -61,6 +61,11 @@
 <script src="libs/CameraConstants.js"></script>
 <script src="libs/CameraPopoverOptions.js"></script>
 <script src="libs/html2canvas.js"></script>
+
+<script src="libs/fabric.js"></script>
+<script src="libs/darkroom.js"></script>
+<script src="libs/darkroom.crop.js"></script>
+<script src="libs/darkroom.rotate.js"></script>
 
 <!--TMP::not dist-->
 <script src="tmp/hammer.fakemultitouch.js"></script>
