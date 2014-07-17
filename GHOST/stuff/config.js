@@ -3,6 +3,7 @@ angular.module('sioWebApp.config', [])
 		.constant('configuration', {
 			name : 'Ghost Camera',
 			titleColor : '#EBEBEB',
+			title : 'Choose your \npicture',
 			version : '1.0.0',
             marketUrl: 'com.camapp.ghost',
 			admobBannerKey : '',
