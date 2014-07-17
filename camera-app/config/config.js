@@ -1,16 +1,16 @@
 'use strict';
 angular.module('sioWebApp.config', [])
 		.constant('configuration', {
-			name : 'Ghost Camera',
+			name : 'Ninja Camera',
 			titleColor : '#EBEBEB',
 			version : '1.0.0',
-            marketUrl: 'com.camapp.ghost',
+            marketUrl: 'com.camapp.ninja',
 			admobBannerKey : '',
 			admobHomeKey : '',
 			admobSaveKey : '',
 			admobShareKey: '',
 			admobBackToHomeKey: '',
-			isProd: JSON.parse('@@isProd'),
+			isProd: JSON.parse('false'),
 			showAds: JSON.parse('false')
 		}
 );

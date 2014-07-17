@@ -391,7 +391,7 @@ module.exports = function (grunt) {
 						expand: true,
 						flatten: true,
 						src: ['./config/config.js'],
-						dest: '<%= yeoman.app %>/scripts/'
+						dest: '<%= yeoman.app %>/data/'
 					}
 				]
 			},
@@ -408,7 +408,7 @@ module.exports = function (grunt) {
 						expand: true,
 						flatten: true,
 						src: ['./config/config.js'],
-						dest: '<%= yeoman.app %>/scripts/'
+						dest: '<%= yeoman.app %>/data/'
 					}
 				]
 			},
@@ -425,7 +425,7 @@ module.exports = function (grunt) {
 						expand: true,
 						flatten: true,
 						src: ['./config/config.js'],
-						dest: '<%= yeoman.app %>/scripts/'
+						dest: '<%= yeoman.app %>/data/'
 					}
 				]
 			}
