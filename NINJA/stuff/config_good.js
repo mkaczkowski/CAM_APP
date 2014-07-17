@@ -3,7 +3,7 @@ angular.module('sioWebApp.config', [])
 		.constant('configuration', {
 			name : 'Ninja Camera',
 			title : 'Choose your \npicture',
-			titleColor : '#EBEBEB',
+			titleColor : '#69221E',
 			version : '1.0.0',
             marketUrl: 'com.camapps.ninja',
 			admobBannerKey : 'ca-app-pub-9064255794056383/6598770752',

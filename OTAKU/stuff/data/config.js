@@ -2,8 +2,8 @@
 angular.module('sioWebApp.config', [])
 		.constant('configuration', {
 			name : 'Otaku Camera',
-			title : 'Choose your \npicture',
-			titleColor : '#EBEBEB',
+			title : '',
+			titleColor : '#353535',
 			version : '1.0.0',
             marketUrl: 'com.camapp.otaku',
 			admobBannerKey : '',
