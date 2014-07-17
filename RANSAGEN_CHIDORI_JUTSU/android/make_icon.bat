@@ -1,1 +1,0 @@
-cordova-gen-icon --icon icon/icon.png
