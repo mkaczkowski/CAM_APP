@@ -1,11 +1,17 @@
+Ad unit name: Saiyan Camera - Back To Home
+Ad unit ID: ca-app-pub-9064255794056383/2308171959
+
 Ad unit name: Saiyan Camera - Banner
 Ad unit ID: ca-app-pub-9064255794056383/2741614359
 
 Ad unit name: Saiyan Camera - Home
 Ad unit ID: ca-app-pub-9064255794056383/4218347552
 
-Ad unit name: Saiyan Camera - Next
+Ad unit name: Saiyan Camera - Save
 Ad unit ID: ca-app-pub-9064255794056383/8648547155
+
+Ad unit name: Saiyan Camera - Share
+Ad unit ID: ca-app-pub-9064255794056383/8354705559
 
 
 /////////////
@@ -19,3 +25,62 @@ Ad unit ID: ca-app-pub-9064255794056383/5555479951
 
 Ad unit name: Ransagen - Next
 Ad unit ID: ca-app-pub-9064255794056383/7032213159
+
+
+//////////////////////
+
+Ad unit name: Otaku Camera - Back To Home
+Ad unit ID: ca-app-pub-9064255794056383/3645304353
+
+Ad unit name: Otaku Camera - Banner
+Ad unit ID: ca-app-pub-9064255794056383/6738371552
+
+Ad unit name: Otaku Camera - Home
+Ad unit ID: ca-app-pub-9064255794056383/8215104757
+
+Ad unit name: Otaku Camera - Save
+Ad unit ID: ca-app-pub-9064255794056383/9691837951
+
+Ad unit name: Otaku Camera - Share
+Ad unit ID: ca-app-pub-9064255794056383/2168571153
+
+//////////////////////////
+
+App name: Ninja Camera
+
+Ad unit name: Ninja Camera - Back To Home
+Ad unit ID: ca-app-pub-9064255794056383/3505703550
+
+Ad unit name: Ninja Camera - Banner
+Ad unit ID: ca-app-pub-9064255794056383/6598770752
+
+Ad unit name: Ninja Camera - Home
+Ad unit ID: ca-app-pub-9064255794056383/8075503957
+
+Ad unit name: Ninja Camera - Save
+Ad unit ID: ca-app-pub-9064255794056383/2028970350
+
+Ad unit name: Ninja Camera - Share
+Ad unit ID: ca-app-pub-9064255794056383/9552237155
+
+
+/////////////////////////////
+App name: Ghost Camera
+
+Ad unit name: Ghost Camera - Back To Home
+Ad unit ID: ca-app-pub-9064255794056383/3366102753
+
+Ad unit name: Ghost Camera - Banner
+Ad unit ID: ca-app-pub-9064255794056383/7935903152
+
+Ad unit name: Ghost Camera - Home
+Ad unit ID: ca-app-pub-9064255794056383/6459169952
+
+Ad unit name: Ghost Camera - Save
+Ad unit ID: ca-app-pub-9064255794056383/1889369552
+
+Ad unit name: Ghost Camera - Share
+Ad unit ID: ca-app-pub-9064255794056383/9412636358
+
+
+

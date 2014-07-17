@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.camerapp.saiya" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Saiyan Camer</name>
+<widget id="com.camerapps.saiyan" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Saiyan Camera</name>
     <description>
-        Saiyan Fun Camer
+        Saiyan Fun Camera
     </description>
-    <author email="jolanta.mandary@onet.pl" href="http://camerapp.com/">
-      CamerApp
+    <author email="jolanta.mandaryn@onet.pl" href="http://camerapps.com/">
+      CamerApps
     </author>
     <content src="index.html" />
     <access origin="*" />
