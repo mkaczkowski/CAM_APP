@@ -4,7 +4,7 @@ angular.module('sioWebApp.config', [])
 			name : 'Saiyan Camera',
 			titleColor : '#EBEBEB',
 			version : '1.0.0',
-            marketUrl: 'com.camerapps.saiyan',
+            marketUrl: 'com.camerapp.saiyan',
 			admobBannerKey : '',
 			admobHomeKey : '',
 			admobSaveKey : '',

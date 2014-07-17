@@ -5,6 +5,25 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <name>Saiyan Camer</name>
+    <description>
+        Saiyan Fun Camer
+    </description>
+    <author email="jolanta.mandary@onet.pl" href="http://camerapp.com/">
+      CamerApp
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="fullscreen" value="true" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="android-minSdkVersion" value="11" />
+    <preference name="BackupWebStorage" value="none" />
+    <feature name="StatusBar">
+        <param name="ios-package" onload="true" value="CDVStatusBar" />
+    </feature>
     <feature name="Keyboard">
         <param name="android-package" value="com.ionic.keyboard.IonicKeyboard" />
         <param name="onload" value="true" />
@@ -36,24 +55,5 @@
     </feature>
     <feature name="Canvas2ImagePlugin">
         <param name="android-package" value="org.devgeeks.Canvas2ImagePlugin.Canvas2ImagePlugin" />
-    </feature>
-    <name>Saiyan Camer</name>
-    <description>
-        Saiyan Fun Camer
-    </description>
-    <author email="jolanta.mandary@onet.pl" href="http://camerapp.com/">
-      CamerApp
-    </author>
-    <content src="index.html" />
-    <access origin="*" />
-    <preference name="fullscreen" value="true" />
-    <preference name="webviewbounce" value="false" />
-    <preference name="UIWebViewBounce" value="false" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="Orientation" value="portrait" />
-    <preference name="android-minSdkVersion" value="11" />
-    <preference name="BackupWebStorage" value="none" />
-    <feature name="StatusBar">
-        <param name="ios-package" onload="true" value="CDVStatusBar" />
     </feature>
 </widget>

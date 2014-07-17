@@ -497,7 +497,6 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('build', [
 		'clean:dist',
-		'replace:production',
 		'fileblocks:default',
 		'wiredep',
 		'useminPrepare',

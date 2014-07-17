@@ -2,12 +2,15 @@
 angular.module('sioWebApp.config', [])
 		.constant('configuration', {
 			name : 'Saiyan Camera',
-			barStyle : 'bar-energized',
+			titleColor : '#EBEBEB',
 			version : '1.0.0',
             marketUrl: 'com.camerapps.saiyan',
 			admobBannerKey : 'ca-app-pub-9064255794056383/2741614359',
-			admobInterKey : 'ca-app-pub-9064255794056383/4218347552',
-			admobInter2Key : 'ca-app-pub-9064255794056383/8648547155',
-			isProd: JSON.parse('@@isProd')
+			admobHomeKey : 'ca-app-pub-9064255794056383/4218347552',
+			admobSaveKey : 'ca-app-pub-9064255794056383/8648547155',
+			admobShareKey: 'ca-app-pub-9064255794056383/8354705559',
+			admobBackToHomeKey: 'ca-app-pub-9064255794056383/2308171959',
+			isProd: JSON.parse('@@isProd'),
+			showAds: JSON.parse('false')
 		}
 );
