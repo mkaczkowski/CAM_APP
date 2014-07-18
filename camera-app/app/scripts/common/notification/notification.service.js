@@ -51,31 +51,27 @@ angular.module('sioWebApp.common').factory('admobService', function (configurati
 
 
 	admobService.showHomeAd = function () {
-		createInterstitial(configuration.admobHomeKey);
+		admobService.createInterstitial(configuration.admobHomeKey);
 	}
 
 	admobService.showBackToHomeAd = function () {
-		createInterstitial(configuration.admobBackToHomeKey);
+		admobService.createInterstitial(configuration.admobBackToHomeKey);
 	}
 
 	admobService.showSaveAd = function () {
-		createInterstitial(configuration.admobSaveKey);
+		admobService.createInterstitial(configuration.admobSaveKey);
 	}
 
 	admobService.showShareAd = function () {
-		createInterstitial(configuration.admobShareKey);
+		admobService.createInterstitial(configuration.admobShareKey);
 
 	}
 
-	 function createInterstitial (publisherId) {
+	admobService.createInterstitial = function (publisherId) {
 		LOG.info("createInterstitial");
 
 		if (!configuration.isProd && configuration.showAds) {
 			alert("AD");
-			return;
-		}
-
-		if (!networkService.isOnline()) {
 			return;
 		}
 

@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.camapp.ninja" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ninja camra</name>
+<widget id="com.camapps.ninja" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Ninja Camera</name>
     <description>
-        ninja camra
+        Ninja Camera
     </description>
-    <author email="marian.mandary@onet.pl" href="http://camapp.com/">
+    <author email="marian.mandaryn@onet.pl" href="http://camapps.com/">
       CamaAps
     </author>
     <content src="index.html" />

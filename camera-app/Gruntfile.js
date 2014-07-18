@@ -445,12 +445,11 @@ module.exports = function (grunt) {
 				options: {
 					rebuild: true
 				},
-				src: '<%= yeoman.app %>/index.html'
-			/*	blocks: {
-					'mock': { cwd: '<%= yeoman.app %>', src: [
-						'scripts/_mock/mock-off.module.js'
+				src: '<%= yeoman.app %>/index.html',
+				blocks: {
+					'hammer': { cwd: '<%= yeoman.app %>', src: [
 					]}
-				}*/
+				}
 			}
 		}
 

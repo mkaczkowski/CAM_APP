@@ -2,7 +2,7 @@
 angular.module('sioWebApp.config', [])
 		.constant('configuration', {
 			name : 'Saiyan Camera',
-			title : 'Choose your \npicture',
+			title : '',
 			buttonBarColor : 'rgba(73, 73, 73, 0.13)',
 			hasPapirus: JSON.parse('true'),
 			titleColor : '#EBEBEB',

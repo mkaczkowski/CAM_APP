@@ -59,7 +59,7 @@ sioWebApp.run(function($rootScope,configuration,$ionicPlatform,$state,$timeout,l
 	$ionicPlatform.ready(function() {
 		LOG.info("$ionicPlatform - ready");
 		admobService.init();
-		admobService.createBanner();
+//		admobService.createBanner();
 		$timeout(function(){
 			admobService.showHomeAd();
 		},1000)

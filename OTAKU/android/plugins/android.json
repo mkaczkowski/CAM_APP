@@ -89,40 +89,40 @@
     },
     "installed_plugins": {
         "com.google.playservices": {
-            "PACKAGE_NAME": "com.camapp.otaku"
+            "PACKAGE_NAME": "com.camapps.otaku"
         },
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "com.camapp.otaku"
+            "PACKAGE_NAME": "com.camapps.otaku"
         },
         "com.rjfun.cordova.plugin.admob": {
-            "PACKAGE_NAME": "com.camapp.otaku"
+            "PACKAGE_NAME": "com.camapps.otaku"
         },
         "com.xmartlabs.cordova.market": {
-            "PACKAGE_NAME": "com.camapp.otaku"
+            "PACKAGE_NAME": "com.camapps.otaku"
         },
         "nl.x-services.plugins.socialsharing": {
-            "PACKAGE_NAME": "com.camapp.otaku"
+            "PACKAGE_NAME": "com.camapps.otaku"
         },
         "org.apache.cordova.camera": {
-            "PACKAGE_NAME": "com.camapp.otaku"
+            "PACKAGE_NAME": "com.camapps.otaku"
         },
         "org.apache.cordova.console": {
-            "PACKAGE_NAME": "com.camapp.otaku"
+            "PACKAGE_NAME": "com.camapps.otaku"
         },
         "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.camapp.otaku"
+            "PACKAGE_NAME": "com.camapps.otaku"
         },
         "org.apache.cordova.dialogs": {
-            "PACKAGE_NAME": "com.camapp.otaku"
+            "PACKAGE_NAME": "com.camapps.otaku"
         },
         "org.apache.cordova.file": {
-            "PACKAGE_NAME": "com.camapp.otaku"
+            "PACKAGE_NAME": "com.camapps.otaku"
         },
         "org.apache.cordova.network-information": {
-            "PACKAGE_NAME": "com.camapp.otaku"
+            "PACKAGE_NAME": "com.camapps.otaku"
         },
         "org.devgeeks.Canvas2ImagePlugin": {
-            "PACKAGE_NAME": "com.camapp.otaku"
+            "PACKAGE_NAME": "com.camapps.otaku"
         }
     },
     "dependent_plugins": {}

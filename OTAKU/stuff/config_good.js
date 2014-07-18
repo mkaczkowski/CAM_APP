@@ -13,7 +13,7 @@ angular.module('sioWebApp.config', [])
 			admobSaveKey : 'ca-app-pub-9064255794056383/9691837951',
 			admobShareKey: 'ca-app-pub-9064255794056383/2168571153',
 			admobBackToHomeKey: 'ca-app-pub-9064255794056383/3645304353',
-			isProd: JSON.parse('@@isProd'),
+			isProd: JSON.parse('true'),
 			showAds: JSON.parse('true')
 		}
 );
