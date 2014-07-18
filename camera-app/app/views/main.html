@@ -5,11 +5,9 @@
 <div style="position: absolute; top: 35px; bottom: 0px; left: 0px; right: 0px;text-align: center">
     <div style="display: table; height: 100%; width: 100%">
         <div style="display: table-cell; vertical-align: middle">
-            <!--<div  style="display:table;margin-left: auto; margin-right: auto; text-align: center; background-color: rgba(255,255,255,0.4); padding: 18px; background-image: url('data/papirus.png')">-->
-				<div  style="display:table;margin-left: auto; margin-right: auto; text-align: center; padding: 40px 31px 45px 40px; height: 220px; background: url('data/papirus.png') no-repeat;
-				background-size: 100% 100%">
+			<div ng-class="{haspapirus: app.hasPapirus}" style="display:table;margin-left: auto; margin-right: auto; text-align: center; padding: 40px 31px 45px 40px; height: 220px;">
                 <p style="font-size: 26px;line-height: 30px; font-weight: bold;font-family:cursive; color: rgb(32, 32, 32)">{{app.title}}</p>
-                <div class="button-bar-inline padding" style="display:inline-block;background-color: rgba(73, 73, 73, 0.13); margin-top: 7px;border-radius: 7px;">
+                <div class="button-bar-inline padding" style="display:inline-block;background-color:{{app.buttonBarColor}}; margin-top: 7px;border-radius: 7px;">
                     <button class="button button-icon icon-camera" style="height: 70px;" ng-click="getPicture()"/>
 					<button class="button button-icon icon-image" style="height: 70px;margin-left: 0px; margin-right: 0px" ng-click="loadImage()"/>
                 </div>

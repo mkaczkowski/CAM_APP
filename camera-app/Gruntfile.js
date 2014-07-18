@@ -432,12 +432,12 @@ module.exports = function (grunt) {
 		},
 
 		fileblocks: {
-			mocks: {
+			emulateTouch: {
 				src: '<%= yeoman.app %>/index.html',
 				blocks: {
-					'mock': { cwd: '<%= yeoman.app %>', src: [
-						'libs/angular-mocks/angular-mocks.js',
-						'scripts/mock/mock-on.module.js'
+					'hammer': { cwd: '<%= yeoman.app %>', src: [
+						'tmp/hammer.fakemultitouch.js',
+						'tmp/hammer.showtouches.js'
 					]}
 				}
 			},
@@ -445,12 +445,12 @@ module.exports = function (grunt) {
 				options: {
 					rebuild: true
 				},
-				src: '<%= yeoman.app %>/index.html',
-				blocks: {
+				src: '<%= yeoman.app %>/index.html'
+			/*	blocks: {
 					'mock': { cwd: '<%= yeoman.app %>', src: [
 						'scripts/_mock/mock-off.module.js'
 					]}
-				}
+				}*/
 			}
 		}
 
@@ -520,13 +520,8 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.registerTask('run-dev', [
-		'fileblocks:default',
+		'fileblocks:emulateTouch',
 		'replace:development',
-		'serve'
-	]);
-
-	grunt.registerTask('run-mock', [
-		'fileblocks:mocks',
 		'serve'
 	]);
 
@@ -538,7 +533,7 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.registerTask('run-preprod-dist', [
-		'fileblocks:default',
+		'fileblocks:emulateTouch',
 		'replace:development',
 		'serve:dist'
 	]);

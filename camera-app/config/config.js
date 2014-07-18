@@ -1,11 +1,13 @@
 'use strict';
 angular.module('sioWebApp.config', [])
 		.constant('configuration', {
-			name : 'Otaku Camera',
+			name : 'Ghost Camera',
 			title : '',
-			titleColor : '#353535',
+			buttonBarColor : 'rgba(255, 255, 255, 0.28)',
+			hasPapirus: JSON.parse('false'),
+			titleColor : '#999999',
 			version : '1.0.0',
-            marketUrl: 'com.camapp.otaku',
+            marketUrl: 'com.camapp.ghost',
 			admobBannerKey : '',
 			admobHomeKey : '',
 			admobSaveKey : '',

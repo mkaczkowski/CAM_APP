@@ -23,7 +23,7 @@ angular.module('sioWebApp.common').factory('admobService', function (configurati
 	admobService.createBanner = function () {
 		LOG.info("createBanner");
 
-		if (!configuration.isProd || networkService.isOffline()) {
+		if (!configuration.isProd || !networkService.isOnline()) {
 			return;
 		}
 
@@ -51,23 +51,23 @@ angular.module('sioWebApp.common').factory('admobService', function (configurati
 
 
 	admobService.showHomeAd = function () {
-		admobService.createInterstitial(configuration.admobHomeKey);
+		createInterstitial(configuration.admobHomeKey);
 	}
 
 	admobService.showBackToHomeAd = function () {
-		admobService.createInterstitial(configuration.admobBackToHomeKey);
+		createInterstitial(configuration.admobBackToHomeKey);
 	}
 
 	admobService.showSaveAd = function () {
-		admobService.createInterstitial(configuration.admobSaveKey);
+		createInterstitial(configuration.admobSaveKey);
 	}
 
 	admobService.showShareAd = function () {
-		admobService.createInterstitial(configuration.admobShareKey);
+		createInterstitial(configuration.admobShareKey);
 
 	}
 
-	admobService.createInterstitial = function (publisherId) {
+	 function createInterstitial (publisherId) {
 		LOG.info("createInterstitial");
 
 		if (!configuration.isProd && configuration.showAds) {
@@ -75,7 +75,7 @@ angular.module('sioWebApp.common').factory('admobService', function (configurati
 			return;
 		}
 
-		if (networkService.isOffline()) {
+		if (!networkService.isOnline()) {
 			return;
 		}
 

@@ -10,14 +10,13 @@ var sioWebApp = angular.module('sioWebApp', [
 	'ngCordova.plugins.network',
 	'ngCordova.plugins.socialSharing',
 	'sioWebApp.config',
-	'sioWebApp.mock',
 	'sioWebApp.common',
 	'sioWebApp.navigation',
 	'sioWebApp.home'
 ]);
 
 sioWebApp.config(function(loggerProvider,configuration) {
-	loggerProvider.enabled(true);//!configuration.isProd);
+	loggerProvider.enabled(!configuration.isProd);
 });
 
 sioWebApp.config(function($stateProvider, $urlRouterProvider) {
@@ -54,7 +53,7 @@ sioWebApp.factory('loadingService', function($ionicLoading) {
 	return loadingService;
 });
 
-sioWebApp.run(function($rootScope,configuration,$ionicPlatform,$state,$timeout,logger,admobService,networkService) {
+sioWebApp.run(function($rootScope,configuration,$ionicPlatform,$state,$timeout,logger,admobService) {
 	var LOG = logger.getInstance('sioWebApp');
 	$rootScope.app = configuration;
 	$ionicPlatform.ready(function() {
