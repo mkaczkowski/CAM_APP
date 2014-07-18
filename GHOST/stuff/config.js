@@ -7,13 +7,13 @@ angular.module('sioWebApp.config', [])
 			hasPapirus: JSON.parse('false'),
 			titleColor : '#999999',
 			version : '1.0.0',
-            marketUrl: 'com.camapp.ghost',
-			admobBannerKey : '',
-			admobHomeKey : '',
-			admobSaveKey : '',
-			admobShareKey: '',
-			admobBackToHomeKey: '',
-			isProd: JSON.parse('false'),
-			showAds: JSON.parse('false')
+            marketUrl: 'com.camapps.ghost',
+			admobBannerKey : 'ca-app-pub-9064255794056383/7935903152',
+			admobHomeKey : 'ca-app-pub-9064255794056383/6459169952',
+			admobSaveKey : 'ca-app-pub-9064255794056383/1889369552',
+			admobShareKey: 'ca-app-pub-9064255794056383/9412636358',
+			admobBackToHomeKey: 'ca-app-pub-9064255794056383/3366102753',
+			isProd: JSON.parse('true'),
+			showAds: JSON.parse('true')
 		}
 );
