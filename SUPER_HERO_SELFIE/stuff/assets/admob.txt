@@ -1,0 +1,13 @@
+App name: SUPER_CAM
+
+Ad unit name: SUPER_CAM - BACK TO HOME
+Ad unit ID: ca-app-pub-9064255794056383/8570724751
+
+Ad unit name: SUPER_CAM - HOME
+Ad unit ID: ca-app-pub-9064255794056383/4140525158
+
+Ad unit name: SUPER_CAM - SAVE
+Ad unit ID: ca-app-pub-9064255794056383/7093991556
+
+Ad unit name: SUPER_CAM - SHARE
+Ad unit ID: ca-app-pub-9064255794056383/5617258358

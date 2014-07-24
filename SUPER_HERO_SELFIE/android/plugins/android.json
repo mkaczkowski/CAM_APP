@@ -89,40 +89,40 @@
     },
     "installed_plugins": {
         "com.google.playservices": {
-            "PACKAGE_NAME": "com.camerapp.saiya"
+            "PACKAGE_NAME": "com.recapp.super"
         },
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "com.camerapp.saiya"
+            "PACKAGE_NAME": "com.recapp.super"
         },
         "com.rjfun.cordova.plugin.admob": {
-            "PACKAGE_NAME": "com.camerapp.saiya"
+            "PACKAGE_NAME": "com.recapp.super"
         },
         "com.xmartlabs.cordova.market": {
-            "PACKAGE_NAME": "com.camerapp.saiya"
+            "PACKAGE_NAME": "com.recapp.super"
         },
         "nl.x-services.plugins.socialsharing": {
-            "PACKAGE_NAME": "com.camerapp.saiya"
+            "PACKAGE_NAME": "com.recapp.super"
         },
         "org.apache.cordova.camera": {
-            "PACKAGE_NAME": "com.camerapp.saiya"
+            "PACKAGE_NAME": "com.recapp.super"
         },
         "org.apache.cordova.console": {
-            "PACKAGE_NAME": "com.camerapp.saiya"
+            "PACKAGE_NAME": "com.recapp.super"
         },
         "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.camerapp.saiya"
+            "PACKAGE_NAME": "com.recapp.super"
         },
         "org.apache.cordova.dialogs": {
-            "PACKAGE_NAME": "com.camerapp.saiya"
+            "PACKAGE_NAME": "com.recapp.super"
         },
         "org.apache.cordova.file": {
-            "PACKAGE_NAME": "com.camerapp.saiya"
+            "PACKAGE_NAME": "com.recapp.super"
         },
         "org.apache.cordova.network-information": {
-            "PACKAGE_NAME": "com.camerapp.saiya"
+            "PACKAGE_NAME": "com.recapp.super"
         },
         "org.devgeeks.Canvas2ImagePlugin": {
-            "PACKAGE_NAME": "com.camerapp.saiya"
+            "PACKAGE_NAME": "com.recapp.super"
         }
     },
     "dependent_plugins": {}

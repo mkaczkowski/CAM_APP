@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.camapp.otaku" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>otaku camra</name>
+<widget id="com.recapp.super" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>super selfi</name>
     <description>
-        otaku camra
+        super selfi
     </description>
-    <author email="marian.mandary@onet.pl" href="http://camapp.com/">
-      CamaAps
+    <author email="julia.mandary@onet.pl" href="http://recapp.com/">
+      RecAps
     </author>
     <content src="index.html" />
     <access origin="*" />

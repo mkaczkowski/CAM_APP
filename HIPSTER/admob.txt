@@ -1,0 +1,11 @@
+Ad unit name: HIPSTER_CAM - BACK TO HOME
+Ad unit ID: ca-app-pub-9064255794056383/2942993552
+
+Ad unit name: HIPSTER_CAM - HOME
+Ad unit ID: ca-app-pub-9064255794056383/1466260351
+
+Ad unit name: HIPSTER_CAM - SAVE
+Ad unit ID: ca-app-pub-9064255794056383/4419726750
+
+Ad unit name: HIPSTER_CAM - SHARE
+Ad unit ID: ca-app-pub-9064255794056383/5896459952

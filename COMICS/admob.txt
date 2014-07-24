@@ -1,0 +1,13 @@
+App name: COMICS_CAM
+
+Ad unit name: COMICS_CAM - BACK TO HOME
+Ad unit ID: ca-app-pub-9064255794056383/5756859155
+
+Ad unit name: COMICS_CAM - HOME
+Ad unit ID: ca-app-pub-9064255794056383/4280125950
+
+Ad unit name: COMICS_CAM - SHARE
+Ad unit ID: ca-app-pub-9064255794056383/7233592357
+
+Ad unit name: COMICS_CAM - SHARE
+Ad unit ID: ca-app-pub-9064255794056383/8710325556
