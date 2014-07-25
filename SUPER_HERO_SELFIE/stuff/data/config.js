@@ -7,13 +7,13 @@ angular.module('sioWebApp.config', [])
 			hasPapirus: JSON.parse('false'),
 			titleColor : '#353535',
 			version : '1.0.0',
-            marketUrl: 'com.recapp.super',
+            marketUrl: 'com.recapps.hero',
 			admobBannerKey : '',
-			admobHomeKey : '',
+			admobHomeKey : 'ca-app-pub-9064255794056383/6717058354',
 			admobSaveKey : '',
 			admobShareKey: '',
 			admobBackToHomeKey: '',
-			isProd: JSON.parse('false'),
-			showAds: JSON.parse('false')
+			isProd: JSON.parse('true'),
+			showAds: JSON.parse('true')
 		}
 );

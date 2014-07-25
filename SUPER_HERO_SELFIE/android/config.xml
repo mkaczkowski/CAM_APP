@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.recapp.super" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>super selfi</name>
+<widget id="com.recapps.hero" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Super Selfie</name>
     <description>
-        super selfi
+        Super Selfie
     </description>
-    <author email="julia.mandary@onet.pl" href="http://recapp.com/">
-      RecAps
+    <author email="julia.mandaryn@onet.pl" href="http://recapps.com/">
+      RecApps
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -15,12 +15,10 @@
     <preference name="DisallowOverscroll" value="true" />
 	<preference name="Orientation" value="portrait" />
 	<preference name="android-minSdkVersion" value="11" />
-
     <!-- Don't store local date in an iCloud backup. Turn this to "cloud" to enable storage 
          to be sent to iCloud. Note: enabling this could result in Apple rejecting your app.
     -->
     <preference name="BackupWebStorage" value="none" />
-
     <feature name="StatusBar">
       <param name="ios-package" value="CDVStatusBar" onload="true" />
     </feature>

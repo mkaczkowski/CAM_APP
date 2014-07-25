@@ -6,7 +6,7 @@ angular.module('sioWebApp.config', [])
 			buttonBarColor : 'rgba(73, 73, 73, 0.13)',
 			hasPapirus: JSON.parse('false'),
 			titleColor : '#353535',
-			version : '1.0.0',
+			version : '1.2.0',
             marketUrl: 'com.camapps.otaku',
 			admobBannerKey : 'ca-app-pub-9064255794056383/6738371552',
 			admobHomeKey : 'ca-app-pub-9064255794056383/8215104757',

@@ -89,40 +89,40 @@
     },
     "installed_plugins": {
         "com.google.playservices": {
-            "PACKAGE_NAME": "com.recapp.super"
+            "PACKAGE_NAME": "com.recapps.hero"
         },
         "com.ionic.keyboard": {
-            "PACKAGE_NAME": "com.recapp.super"
+            "PACKAGE_NAME": "com.recapps.hero"
         },
         "com.rjfun.cordova.plugin.admob": {
-            "PACKAGE_NAME": "com.recapp.super"
+            "PACKAGE_NAME": "com.recapps.hero"
         },
         "com.xmartlabs.cordova.market": {
-            "PACKAGE_NAME": "com.recapp.super"
+            "PACKAGE_NAME": "com.recapps.hero"
         },
         "nl.x-services.plugins.socialsharing": {
-            "PACKAGE_NAME": "com.recapp.super"
+            "PACKAGE_NAME": "com.recapps.hero"
         },
         "org.apache.cordova.camera": {
-            "PACKAGE_NAME": "com.recapp.super"
+            "PACKAGE_NAME": "com.recapps.hero"
         },
         "org.apache.cordova.console": {
-            "PACKAGE_NAME": "com.recapp.super"
+            "PACKAGE_NAME": "com.recapps.hero"
         },
         "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.recapp.super"
+            "PACKAGE_NAME": "com.recapps.hero"
         },
         "org.apache.cordova.dialogs": {
-            "PACKAGE_NAME": "com.recapp.super"
+            "PACKAGE_NAME": "com.recapps.hero"
         },
         "org.apache.cordova.file": {
-            "PACKAGE_NAME": "com.recapp.super"
+            "PACKAGE_NAME": "com.recapps.hero"
         },
         "org.apache.cordova.network-information": {
-            "PACKAGE_NAME": "com.recapp.super"
+            "PACKAGE_NAME": "com.recapps.hero"
         },
         "org.devgeeks.Canvas2ImagePlugin": {
-            "PACKAGE_NAME": "com.recapp.super"
+            "PACKAGE_NAME": "com.recapps.hero"
         }
     },
     "dependent_plugins": {}
