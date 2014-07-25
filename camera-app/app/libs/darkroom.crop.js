@@ -1,7 +1,10 @@
 ;(function(window, document, Darkroom, fabric) {
 	'use strict';
 
+    var imgMask;
+
 	var CropZone = fabric.util.createClass(fabric.Rect, {
+
 		_render: function(ctx) {
 			this.callSuper('_render', ctx);
 
@@ -15,6 +18,8 @@
 			var scaleY = flipY / this.scaleY;
 
 			ctx.scale(scaleX, scaleY);
+
+            //ctx.rotate(20*Math.PI/180)
 
 			// Overlay rendering
 			ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
@@ -36,6 +41,7 @@
 			ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
 			this._renderBorders(ctx);
 			this._renderGrid(ctx);
+            this._renderMask(ctx);
 
 			// Reset scale
 			ctx.scale(1/scaleX, 1/scaleY);
@@ -81,6 +87,10 @@
 
 			// Down rect
 			ctx.fillRect(x0, y2, x3 - x0, y3 - y2);
+
+
+            ctx.drawImage(imgMask,x1,y1,x2-x1,y2-y1);
+//            ctx.drawImage(imgMask,0,0,100,100);
 		},
 
 		_renderBorders: function(ctx) {
@@ -112,8 +122,31 @@
 			ctx.moveTo(-this.getWidth()/2, -this.getHeight()/2 + 2/3 * this.getHeight());
 			ctx.lineTo(this.getWidth()/2, -this.getHeight()/2 + 2/3 * this.getHeight());
 			ctx.stroke();
-		}
+		},
+
+        _renderMask: function(ctx) {
+//            var img = new Image;
+//            img.onload = function(){
+//                var x1 = Math.ceil(-this.getWidth() / 2);
+//                var x2 = Math.ceil(this.getWidth() / 2);
+//
+//                var y1 = Math.ceil(-this.getHeight() / 2);
+//                var y2 = Math.ceil(this.getHeight() / 2);
+//
+//                var x =  x1;
+//                var y = y1;
+//                var width=  x2 - x1;
+//                var height = y2 - y2;
+//
+//                ctx.drawImage(img,x,y,width,height);
+//            };
+//            img.src = "data/images/head1.png";
+        }
+
 	});
+
+
+
 
 	Darkroom.plugins['crop'] = Darkroom.Plugin.extend({
 		// Init point
@@ -192,6 +225,12 @@
 
 			fabric.util.addListener(fabric.document, 'keydown', this.onKeyDown.bind(this));
 			fabric.util.addListener(fabric.document, 'keyup', this.onKeyUp.bind(this));
+
+            imgMask = new Image;
+            imgMask.onload = function(){
+
+            };
+            imgMask.src = "data/images/head1.png";
 
 	//		this.darkroom.addEventListener('image:change', this.releaseFocus.bind(this));
 		},

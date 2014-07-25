@@ -93,14 +93,19 @@ angular.module('sioWebApp.home').controller('CanvasCtrl', function ($scope, $tim
 	};
 
 	$scope.saveCanvasToFile = function(successHandler) {
+
 		mySharedService.prepForBroadcast(null);
-		imageService.saveCanvasToFile('canvas',function(canvas,path){
+
+
+        /*imageService.saveCanvasToFile('canvas',function(canvas,path){
 			if (successHandler) {
 				successHandler(canvas)
 			} else {
 				notificationService.savedConfirm(path, function () { $scope.sharePicure() });
 			}
-		})
+		})*/
+
+
 	}
 
 	$scope.sharePicure = function(){

@@ -22,11 +22,11 @@
 		},
 
 		rotateLeft: function rotateLeft() {
-			this.rotate(-90);
+			this.rotate(-2);
 		},
 
 		rotateRight: function rotateRight() {
-			this.rotate(90);
+			this.rotate(2);
 		},
 
 		rotate: function rotate(angle) {
@@ -56,8 +56,8 @@
 
 			canvas.renderAll();
 
-			darkroom.dispatchEvent('image:change');
-			darkroom.dispatchEvent('image:rotate');
+			//darkroom.dispatchEvent('image:change');
+			//darkroom.dispatchEvent('image:rotate');
 		},
 
 		mirror: function mirror() {

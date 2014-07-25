@@ -5,14 +5,16 @@
     </div>
 
     <div style=" text-align: right; display:inherit">
-        <button class="button button-balanced icon ion-android-checkmark" style="width:62px;margin-left: 8px;"  data-ng-class="isEmpty ? 'disabled' : ''" ng-click="saveCanvasToFile()"/>
+        <button class="button button-balanced icon ion-android-checkmark" style="width:62px;margin-left: 8px;"   ng-click="saveCanvasToFile()"/>
         <button class="button button-positive icon ion-android-share" style="width:62px;margin-left: 8px;" data-ng-class="isEmpty ? 'disabled' : ''" ng-click="sharePicure()"/>
 		<button class="button button-energized icon ion-thumbsup" style="width:62px;margin-left: 8px;" ng-click="rateUs()"></button>
     </div>
 </div>
 
 <div id="canvas" style="position: absolute; bottom: 70px; top: 45px; left: 0px; right: 0px;">
-    <img id="pictureContainer" data-ng-src="{{pictureUrl}}" style="position: absolute; width: 100%; height: 100%"/>
+
+    <img id="pictureContainer" data-ng-src="{{pictureUrl}}" style="position: absolute; top: {{684 * 64/1200}}px; left:{{460 * 160/613}}px; width: {{460 * 307/613}}px; height:{{684 * 289/1200}}px;"/>
+    <img id="backgroundContainer" src="data/images/body1.png" style="position: absolute; width: 100%; height: 100%"/>
 
     <div id="draggableContainer" style="position: absolute; height: 100%; width: 100%">
         <img id="fullscreenContainer" style="position: absolute; height: 100%; width: 100%;">

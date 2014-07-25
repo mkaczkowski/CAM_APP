@@ -8,12 +8,7 @@ angular.module('sioWebApp.config', [])
 			titleColor : '#353535',
 			version : '1.2.0',
             marketUrl: 'com.camapps.otaku',
-			admobBannerKey : 'ca-app-pub-9064255794056383/6738371552',
-			admobHomeKey : 'ca-app-pub-9064255794056383/8215104757',
-			admobSaveKey : 'ca-app-pub-9064255794056383/9691837951',
-			admobShareKey: 'ca-app-pub-9064255794056383/2168571153',
-			admobBackToHomeKey: 'ca-app-pub-9064255794056383/3645304353',
-			isProd: JSON.parse('true'),
-			showAds: JSON.parse('true')
+			isProd: JSON.parse('false'),
+			showAds: JSON.parse('false')
 		}
 );
